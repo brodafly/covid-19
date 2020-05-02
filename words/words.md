@@ -2,43 +2,43 @@
     <div>
     	<iframe id="splash" width="960" height="480" src="banners/splash.html"></iframe>
         <div style="top: 70px;font-size: 75px;font-weight: bold;">
-        	What Happens Next?
+            Какво ще се случва от тук нататък?
        	</div>
 		<div style="font-weight: 500;top: 140px;left: 10px;font-size: 29px;">
-			COVID-19 Futures, Explained With Playable Simulations
+			COVID-19 развои, обяснени с интерактивни симулации
 		</div>
 		<div style="font-weight: 100;top: 189px;left: 10px;font-size: 19px;line-height: 21px;">
 			<b>
-				🕐 30 min play/read
+				🕐 30 минути игра/четене
 				&nbsp;&middot;&nbsp;
 			</b>
-			by
+			от
 			<a href="https://scholar.google.com/citations?user=_wHMGkUAAAAJ&amp;hl=en">Marcel Salathé</a>
-			(epidemiologist)
+			(епидемиолог)
 			&
 			<a href="https://ncase.me/">Nicky Case</a>
-			(art/code)
+			(илюстрации/код)
 		</div>
 	</div>
 </div>
 
-"The only thing to fear is fear itself" was stupid advice.
+"Единственото нещо, от което трябва да се страхуваме, е самият страх" беше глупав съвет.
 
-Sure, don't hoard toilet paper – but if policymakers fear fear itself, they'll downplay real dangers to avoid "mass panic". Fear's not the problem, it's how we *channel* our fear. Fear gives us energy to deal with dangers now, and prepare for dangers later.
+Разбира се, не се презапасявайте с тоалтена хартия, но ако политиците се страхуват от самия страх, те ще омаловажат истинските опасности с цел да избегнат "масовата паника". Не страхът е проблемът, а как *насочваме* страха си. Страхът ни дава енергия да се справим с опасностите сега и да се подготвим за опасности по-късно.
 
-Honestly, we (Marcel, epidemiologist + Nicky, art/code) are worried. We bet you are, too! That's why we've channelled our fear into making these **playable simulations**, so that *you* can channel your fear into understanding:
+Честно казано, ние (Марсел, епидемиолог + Ники, илюстрации/код) се притесняваме. Обзалагаме се, че вие също! Ето защо насочихме страха си да направим тези **интерактивни симулации**, така че *вие* да можете да насочите своя страх в разбиране:
 
-* **The Last Few Months** (epidemiology 101, SEIR model, R & R<sub>0</sub>)
-* **The Next Few Months** (lockdowns, contact tracing, masks)
-* **The Next Few Years** (loss of immunity? no vaccine?)
+* **Последните няколко месеца** (въведение в епидемиологията, SEIR моделът, R & R<sub>0</sub>)
+* **Следващите няколко месеца** (затваряния, проследяване на контакти, маски)
+* **Следващите няколко години** (загуба на имунитет? липсващи ваксини?)
 
-This guide (published May 1st, 2020. click this footnote!→[^timestamp]) is meant to give you hope *and* fear. To beat COVID-19 **in a way that also protects our mental & financial health**, we need optimism to create plans, and pessimism to create backup plans. As Gladys Bronwyn Stern once said, *“The optimist invents the airplane and the pessimist the parachute.”*
+Това ръководство (публикувано на 1 май 2020г. кликнете върху тази бележка!→[^timestamp]) има за цел да ви даде надежда *и* да ви уплаши. За да победим COVID-19 **по начин, който запазва психическото и финансовото ни здраве**, се нуждаем от оптимизъм за създаване на планове и песимизъм за създаване на резервни планове. Както е казал Гладис Бронвин Стърн: *„Оптимистът изобретява самолета, а песимистът - парашута.“*
 
-[^timestamp]: These footnotes will have sources, links, or bonus commentary. Like this commentary!
+[^timestamp]: Тези бележки ще съдържат източници, линкове или бонус коментари. Като този коментар, например!
     
-    **This guide was published on May 1st, 2020.** Many details will become outdated, but we're confident this guide will cover 95% of possible futures, and that Epidemiology 101 will remain forever useful.
+    **Това ръководство е публикувано на 1 май 2020г.** Много от описаните детайли ще се променят, но ние сме сигурни, че това ръководство ще покрие 95% от възможните развои и че въведението в епидемиологията ще си остане полезно.
 
-So, buckle in: we're about to experience some turbulence.
+Така че, затегнете коланите: предстои ни турболенция!
 
 <div class="section chapter">
     <div>
