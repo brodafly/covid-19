@@ -29,8 +29,8 @@
 Честно казано, ние (Марсел, епидемиолог + Ники, илюстрации/код) се притесняваме. Обзалагаме се, че вие също! Ето защо насочихме страха си да направим тези **интерактивни симулации**, така че *вие* да можете да насочите своя страх в разбиране:
 
 * **Последните няколко месеца** (въведение в епидемиологията, SEIR моделът, R & R<sub>0</sub>)
-* **Следващите няколко месеца** (затваряния, проследяване на контакти, маски)
-* **Следващите няколко години** (загуба на имунитет? липсващи ваксини?)
+* **Следващите няколко месеца** (масови карантини, проследяване на контакти, маски)
+* **Следващите няколко години** (загуба на имунитет? никакви ваксини?)
 
 Това ръководство (публикувано на 1 май 2020г. кликнете върху тази бележка!→[^timestamp]) има за цел да ви даде надежда *и* да ви уплаши. За да победим COVID-19 **по начин, който запазва психическото и финансовото ни здраве**, се нуждаем от оптимизъм за създаване на планове и песимизъм за създаване на резервни планове. Както е казал Гладис Бронвин Стърн: *„Оптимистът изобретява самолета, а песимистът - парашута.“*
 
@@ -43,198 +43,198 @@
 <div class="section chapter">
     <div>
 		<img src="banners/curve.png" height=480 style="position: absolute;"/>
-        <div>The Last Few Months</div>
+        <div>Последните няколко месеца</div>
     </div>
 </div>
 
-Pilots use flight simulators to learn how not to crash planes.
+Пилотите използват авиационни тренажори, за да се научат как да не разбиват самолети.
 
-**Epidemiologists use epidemic simulators to learn how not to crash humanity.**
+**Епидемиолозите използват епидемиологични симулации, за да научат как да не разбият човечеството.**
 
-So, let's make a very, *very* simple "epidemic flight simulator"! In this simulation, <icon i></icon> Infectious people can turn <icon s></icon> Susceptible people into more <icon i></icon> Infectious people:
+Така че, нека направим много, *много* елементарна "епидемиологична симулация на разпространението"! В тази симулация, <icon i></icon> Инфекциозните хора могат да превърнат <icon s></icon> Уязвими хора в още <icon i></icon> Инфекциозни хора:
 
 ![](pics/spread.png)
 
-It's estimated that, *at the start* of a COVID-19 outbreak, the virus jumps from an <icon i></icon> to an <icon s></icon> every 4 days, *on average*.[^serial_interval] (remember, there's a lot of variation)
+Изчислено е, че при *възникването* на огнище на COVID-19, вирусът прескача от <icon i></icon> на <icon s></icon> *средно* на всеки 4 дни.[^serial_interval] (не забравяйте, че има много вариации)
 
-[^serial_interval]: “The mean [serial] interval was 3.96 days (95% CI 3.53–4.39 days)”. [Du Z, Xu X, Wu Y, Wang L, Cowling BJ, Ancel Meyers L](https://wwwnc.cdc.gov/eid/article/26/6/20-0357_article) (Disclaimer: Early release articles are not considered as final versions)
+[^serial_interval]: “The mean [serial] interval was 3.96 days (95% CI 3.53–4.39 days)”. [Du Z, Xu X, Wu Y, Wang L, Cowling BJ, Ancel Meyers L](https://wwwnc.cdc.gov/eid/article/26/6/20-0357_article) (Отказ от отговорност: Предсрочно публикуваните статии не се считат за окончателни версии)
 
-If we simulate "double every 4 days" *and nothing else*, on a population starting with just 0.001% <icon i></icon>, what happens? 
+Ако симулираме "удвояване на броя на инфекциозните на всеки 4 дни" *и нищо друго*, за население, започващо само с 0,001% <icon i></icon>, какво се случва?
 
-**Click "Start" to play the simulation! You can re-play it later with different settings:** (technical caveats: [^caveats])
+**Кликнете върху "Старт", за да пуснете симулацията! По-късно ще можете да я възпроизведете отново с различни настройки:** (технически уговорки: [^caveats])
 
-[^caveats]: **Remember: all these simulations are super simplified, for educational purposes.**
+[^caveats]: **Запомнете: всички тези симулации са изключително опростени с образователна цел.**
     
-    One simplification: When you tell this simulation "Infect 1 new person every X days", it's actually increasing # of infected by 1/X each day. Same for future settings in these simulations – "Recover every X days" is actually reducing # of infected by 1/X each day.
+    Едно опростяване: Когато кажете на тази симулация „Зарази 1 нов човек на всеки X дни“, тя всъщност увеличава броя заразени с 1/X всеки ден. Същото важи и за бъдещите настройки в тези симулации - „Възстановяване на всеки X дни“ всъщност намалява броя заразени с 1/X всеки ден.
     
-    Those *aren't* exactly the same, but it's close enough, and for educational purposes it's less opaque than setting the transmission/recovery rates directly.
+    Тези две неща *не са* абсолютно сходни, но са достатъчно близки и за образователни цели са по-разбираеми, отколкото директно определяне на скоростта на предаване/възстановяване.
 
 <div class="sim">
 		<iframe src="sim?stage=epi-1" width="800" height="540"></iframe>
 </div>
 
-This is the **exponential growth curve.** Starts small, then explodes. "Oh it's just a flu" to "Oh right, flus don't create *mass graves in rich cities*". 
+Това е **експоненциална крива на растеж.** Покачва се бавно, след което избухва. Преминаваме от „О, това е просто грип“ в „О, правилно, грипът не създава *масови гробове в богатите градове*“.
 
 ![](pics/exponential.png)
 
-But, this simulation is wrong. Exponential growth, thankfully, can't go on forever. One thing that stops a virus from spreading is if others *already* have the virus:
+Но тази симулация е погрешна. Експоненциалният растеж, за щастие, не може да продължава вечно. Едно от нещата, които спират разпространението на вируса, е, ако другите *вече* са заразени с него:
 
 ![](pics/susceptibles.png)
 
-The more <icon i></icon>s there are, the faster <icon s></icon>s become <icon i></icon>s, **but the fewer <icon s></icon>s there are, the *slower* <icon s></icon>s become <icon i></icon>s.**
+Колкото повече <icon i></icon> има, толкова по-бързо <icon s></icon> стават <icon i></icon>, **но колкото по-малко <icon s></icon> има, *толкова по-бавно* <icon s></icon> стават <icon i></icon>.**
 
-How's this change the growth of an epidemic? Let's find out:
+Как това променя развоя на епидемия? Нека разберем:
 
 <div class="sim">
 		<iframe src="sim?stage=epi-2" width="800" height="540"></iframe>
 </div>
 
-This is the "S-shaped" **logistic growth curve.** Starts small, explodes, then slows down again.
+Това е "S-образната" **крива на логистичния растеж.** Покачва се бавно, избухва, след което отново се забавя.
 
-But, this simulation is *still* wrong. We're missing the fact that <icon i></icon> Infectious people eventually stop being infectious, either by 1) recovering, 2) "recovering" with lung damage, or 3) dying.
+Но тази симулация е *все още* погрешна. Изпускаме фактът, че <icon i></icon> Инфекциозните хора в крайна сметка престават да бъдат инфекциозни, било чрез 1) възстановяване, 2) „възстановяване“ с увреждане на белите дробове, или 3) умиране.
 
-For simplicity's sake, let's pretend that all <icon i></icon> Infectious people become <icon r></icon> Recovered. (Just remember that in reality, some are dead.) <icon r></icon>s can't be infected again, and let's pretend – *for now!* – that they stay immune for life.
+За простота, нека си представим, че всички <icon i></icon> Инфекциозни хора стават <icon r></icon> Възстановени. (Само не забравяйте, че в действителност някои са мъртви.) <icon r></icon> не могат да бъдат заразени отново и нека си представим - *засега!* - че остават имунизирани за цял живот.
 
-With COVID-19, it's estimated you're <icon i></icon> Infectious for 10 days, *on average*.[^infectiousness] That means some folks will recover before 10 days, some after. **Here's what that looks like, with a simulation *starting* with 100% <icon i></icon>:**
+При COVID-19 е изчислено, че сте <icon i></icon> Инфекциозни за 10 дни, *средно*. [^infectiousness] Това означава, че някои хора ще се възстановят преди 10 дни, някои след това. **Ето как изглежда това при симулация, *започваща* със 100% <icon i></icon>:**
 
-[^infectiousness]: “The median communicable period \[...\] was 9.5 days.” [Hu, Z., Song, C., Xu, C. et al](https://link.springer.com/article/10.1007/s11427-020-1661-4) Yes, we know "median" is not the same as "average". For simplified educational purposes, close enough.
+[^infectiousness]: “The median communicable period \[...\] was 9.5 days.” [Hu, Z., Song, C., Xu, C. et al](https://link.springer.com/article/10.1007/s11427-020-1661-4) Да, знаем, че „медианата“ не е същото като „средната стойност“. За опростени образователни цели е достатъчно близо.
 
 <div class="sim">
 		<iframe src="sim?stage=epi-3" width="800" height="540"></iframe>
 </div>
 
-This is the opposite of exponential growth, the **exponential decay curve.**
+Това е обратното на експоненциалния растеж, **експоненциалната крива на разпад.**
 
-Now, what happens if you simulate S-shaped logistic growth *with* recovery?
+Какво ще стане, ако симулирате S-образен логистичен растеж *с* възстановяване?
 
 ![](pics/graphs_q.png)
 
-Let's find out.
+Нека разберем.
 
-<b style='color:#ff4040'>Red curve</b> is *current* cases <icon i></icon>,    
-<b style='color:#999999'>Gray curve</b> is *total* cases (current + recovered <icon r></icon>),
-starts at just 0.001% <icon i></icon>:
+<b style='color:#ff4040'>Червената крива</b> е броят *текущи* случаи <icon i></icon>,
+<b style='color:#999999'>Сивата крива</b> е *общият* брой случаи (текущи + възстановени <icon r></icon>),
+започва от само 0.001% <icon i></icon>:
 
 <div class="sim">
 		<iframe src="sim?stage=epi-4" width="800" height="540"></iframe>
 </div>
 
-And *that's* where that famous curve comes from! It's not a bell curve, it's not even a "log-normal" curve. It has no name. But you've seen it a zillion times, and beseeched to flatten.
+И *ето* откъде идва онази прословута крива! Тя не е във формата на камбана, не е дори „log-нормална“. Тя няма име. Но вие сте я виждали милион пъти и сте били умолявани да я изравните.
 
-This is the the **SIR Model**,[^sir]    
+Това се нарича **SIR модел**,[^sir]
 (<icon s></icon>**S**usceptible <icon i></icon>**I**nfectious <icon r></icon>**R**ecovered)      
-the *second*-most important idea in Epidemiology 101:
+*втората* най-важна идея в Увод в Епидемиологията:
 
-[^sir]: For more technical explanations of the SIR Model, see [the Institute for Disease Modeling](https://www.idmod.org/docs/hiv/model-sir.html#) and [Wikipedia](https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology#The_SIR_model)
+[^sir]: За по-технически обяснения на SIR модела, вижте [Институтът за моделиране на заболявания](https://www.idmod.org/docs/hiv/model-sir.html#) и [Wikipedia](https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology#The_SIR_model)
 
 ![](pics/sir.png)
 
-**NOTE: The simulations that inform policy are way, *way* more sophisticated than this!** But the SIR Model can still explain the same general findings, even if missing the nuances.
+**ЗАБЕЛЕЖКА: Симулациите, използвани за вземането на информирани политически решения, са *много* по-сложни!** Въпреки това SIR моделът може да обясни същите общи изводи, дори и да липсват нюансите.
 
-Actually, let's add one more nuance: before an <icon s></icon> becomes an <icon i></icon>, they first become <icon e></icon> Exposed. This is when they have the virus but can't pass it on yet – infect*ed* but not yet infect*ious*.
+Всъщност нека добавим още един нюанс: преди един <icon s></icon> да се превърне в <icon i></icon>, той първо се превръща в <icon e></icon> Изложен. Това е, когато той има вируса, но все още не може да го предава на други - заразѐн e, но все още не е зара̀зен.
 
 ![](pics/seir.png)
 
-(This variant is called the **SEIR Model**[^seir], where the "E" stands for <icon e></icon> "Exposed". Note this *isn't* the everyday meaning of "exposed", when you may or may not have the virus. In this technical definition, "Exposed" means you definitely have it. Science terminology is bad.)
+(Този вариант се нарича **SEIR модел**, където "E"-то означава <icon e></icon> "Exposed"/"Изложен". Имайте предвид, че *не* става на въпрос за обичайното значение на думата "изложен", когато може да си или да не си заразен с вируса. В случая "Изложен" означава, че със сигурност си заразен с вируса. Научните термини са объркващи.)
 
-[^seir]: For more technical explanations of the SEIR Model, see [the Institute for Disease Modeling](https://www.idmod.org/docs/hiv/model-seir.html) and [Wikipedia](https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology#The_SEIR_model)
+[^seir]: За по-технически обяснения на SEIR модела, вижте [Институтът за моделиране на заболявания](https://www.idmod.org/docs/hiv/model-seir.html) и [Wikipedia](https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology#The_SEIR_model)
 
-For COVID-19, it's estimated that you're <icon e></icon> infected-but-not-yet-infectious for 3 days, *on average*.[^latent] What happens if we add that to the simulation?
+За COVID-19 е изчислено, че си <icon e></icon> изложен, но все още не инфекциозен в продължение на 3 дни, *средно*.[^latent] Какво се случва, ако добавим това към симулацията ?
 
-[^latent]: “Assuming an incubation period distribution of mean 5.2 days from a separate study of early COVID-19 cases, we inferred that infectiousness started from 2.3 days (95% CI, 0.8–3.0 days) before symptom onset” (translation: Assuming symptoms start at 5 days, infectiousness starts 2 days before = Infectiousness starts at 3 days) [He, X., Lau, E.H.Y., Wu, P. et al.](https://www.nature.com/articles/s41591-020-0869-5)
+[^latent]: “Assuming an incubation period distribution of mean 5.2 days from a separate study of early COVID-19 cases, we inferred that infectiousness started from 2.3 days (95% CI, 0.8–3.0 days) before symptom onset” (превод: Ако приемем, че симптомите се проявяват след 5 дни, инфекциозността започва 2 дни преди този момент = Инфекциозността започва след 3 дни) [He, X., Lau, E.H.Y., Wu, P. et al.](https://www.nature.com/articles/s41591-020-0869-5)
 
-<b style='color:#ff4040'>Red <b style='color:#FF9393'>+ Pink</b> curve</b> is *current* cases (infectious <icon i></icon> + exposed <icon e></icon>),    
-<b style='color:#888'>Gray curve</b> is *total* cases (current + recovered <icon r></icon>):
+<b style='color:#ff4040'>Червената <b style='color:#FF9393'>+ розовата</b> крива</b> са *текущите* случаи (инфекциозни <icon i></icon> + изложени <icon e></icon>),    
+<b style='color:#888'>Сивата крива</b> са *общо* случаите (текущи + възстановени <icon r></icon>):
 
 <div class="sim">
 		<iframe src="sim?stage=epi-5" width="800" height="540"></iframe>
 </div>
 
-Not much changes! How long you stay <icon e></icon> Exposed changes the ratio of <icon e></icon>-to-<icon i></icon>, and *when* current cases peak... but the *height* of that peak, and total cases in the end, stays the same.
+Нещата си остават почти същите! Колко време оставаш <icon e></icon> Изложен променя съотношението на <icon e></icon> към <icon i></icon> и *кога* текущият брой на случаите достига своя връх... но *височината* на този връх и крайният брой случаи остават същите.
 
-Why's that? Because of the *first*-most important idea in Epidemiology 101:
+Защо се получава така? Заради *най-важната* идея в Увод в Епидемиологията:
 
 ![](pics/r.png)
 
-Short for "Reproduction number". It's the *average* number of people an <icon i></icon> infects *before* they recover (or die).
+Съкращение за "репродуктивно число". Това е *средният* брой хора, които <icon i></icon> заразява *преди* да се възстанови (или умре).
 
 ![](pics/r2.png)
 
-**R** changes over the course of an outbreak, as we get more immunity & interventions.
+**R** се променя по време на огнището, тъй като получаваме повече имунитет и интервенции.
 
-**R<sub>0</sub>** (pronounced R-nought) is what R is *at the start of an outbreak, before immunity or interventions*. R<sub>0</sub> more closely reflects the power of the virus itself, but it still changes from place to place. For example, R<sub>0</sub> is higher in dense cities than sparse rural areas.
+**R<sub>0</sub>** (произнесено R-нулево) е стойността на R при *избухването на епидемично огнище, преди имунитета и интервенциите*. R<sub>0</sub> по-точно отразява силата на самия вирус, но все още варира от място на място. Например, R<sub>0</sub> е по-голямо в по-населените градове и по-ниско в по-откъснатите райони.
 
-(Most news articles – and even some research papers! – confuse R and R<sub>0</sub>. Again, science terminology is bad)
+(Повечето новини - и дори някои научни трудове! – бъркат R и R<sub>0</sub>. Отново, научните термини са объркващи.)
 
-The R<sub>0</sub> for "the" seasonal flu is around 1.28[^r0_flu]. This means, at the *start* of a flu outbreak, each <icon i></icon> infects 1.28 others *on average.* (If it sounds weird that this isn't a whole number, remember that the "average" mom has 2.4 children. This doesn't mean there's half-children running about.)
+R<sub>0</sub> за сезонния грип е около 1.28[^r0_flu]. Това означава, че в момента на *избухването* на грипната епидемията, всеки <icon i></icon> заразява 1.28 други, *средно.* (Ако ви изглежда странно, че не е цяло число, спомнете си, че "средностатистическата" майка има 2.4 деца. Това не означава, че някъде има половин дете, което си обикаля насам-натам.)
 
 [^r0_flu]: “The median R value for seasonal influenza was 1.28 (IQR: 1.19–1.37)” [Biggerstaff, M., Cauchemez, S., Reed, C. et al.](https://bmcinfectdis.biomedcentral.com/articles/10.1186/1471-2334-14-480)
 
-The R<sub>0</sub> for COVID-19 is estimated to be around 2.2,[^r0_covid] though one *not-yet-finalized* study estimates it was 5.7(!) in Wuhan.[^r0_wuhan]
+R<sub>0</sub> за COVID-19 се изчислява на около 2.2,[^r0_covid] въпреки че едно *все още неокончателно* изследване го изчислява на 5.7(!) в Ухан.[^r0_wuhan]
 
 [^r0_covid]: “We estimated the basic reproduction number R0 of 2019-nCoV to be around 2.2 (90% high density interval: 1.4–3.8)” [Riou J, Althaus CL.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7001239/)
 
 [^r0_wuhan]: “we calculated a median R0 value of 5.7 (95% CI 3.8–8.9)” [Sanche S, Lin YT, Xu C, Romero-Severson E, Hengartner N, Ke R.](https://wwwnc.cdc.gov/eid/article/26/7/20-0282_article)
 
-In our simulations – *at the start & on average* – an <icon i></icon> infects someone every 4 days, over 10 days. "4 days" goes into "10 days" two-and-a-half times. This means – *at the start & on average* – each <icon i></icon> infects 2.5 others. Therefore, R<sub>0</sub> = 2.5. (caveats:[^r0_caveats_sim])
+При нашите симулации *в началото и средностатистически* един <icon i></icon> заразява някого на всеки 4 дни, в продължение на 10 дни. "4 дни" се събират в "10 дни" два пъти и половина. Това означава, че *в началото и средностатистически* всеки <icon i></icon> заразява 2.5 други. Следователно R<sub>0</sub> = 2.5. (уточнения:[^r0_caveats_sim])
 
-[^r0_caveats_sim]: This is pretending that you're equally infectious all throughout your "infectious period". Again, simplifications for educational purposes.
+[^r0_caveats_sim]: Това се получава, ако се приемем, че човек е еднакво инфекциозен за продължението на целия "инфекциозен период". Отново, опростяване с образователна цел.
 
-**Play with this R<sub>0</sub> calculator, to see how R<sub>0</sub> depends on recovery time & new-infection time:**
+**Поиграйте си с този R<sub>0</sub> калкулатор, за да видите как стойността на R<sub>0</sub> зависи от времето необходимо за възстановяване и времето необходимо за заразяване на друг:**
 
 <div class="sim">
 		<iframe src="sim?stage=epi-6a&format=calc" width="285" height="255"></iframe>
 </div>
 
-But remember, the fewer <icon s></icon>s there are, the *slower* <icon s></icon>s become <icon i></icon>s. The *current* reproduction number (R) depends not just on the *basic* reproduction number (R<sub>0</sub>), but *also* on how many people are no longer <icon s></icon> Susceptible. (For example, by recovering & getting natural immunity.)
+Помнете, колкото по-малко <icon s></icon> има, толкова по-бавно <icon s></icon> се превръщат в <icon i></icon>. *Текущото* репродуктивно число (R) зависи не само от *базовото* репродуктивно число (R<sub>0</sub>), но и от това колко човека вече не са <icon s></icon> уязвими. (Например, благодарение възстановяването им или от придобиване на естествен имунитет.)
 
 <div class="sim">
 		<iframe src="sim?stage=epi-6b&format=calc" width="285" height="390"></iframe>
 </div>
 
-When enough people have immunity, R < 1, and the virus is contained! This is called **herd immunity**. For flus, herd immunity is achieved *with a vaccine*. Trying to achieve "natural herd immunity" by letting folks get infected is a *terrible* idea. (But not for the reason you may think! We'll explain later.)
+Когато достатъчно хора имат имунитет, стойността R < 1 и разпространението на вируса е овладяно. Това се нарича **колективен имунитет**. При гриповете колективен имунитет се постига *чрез ваксина*. Да се постигне "естествен колективен имунитет", оставяйки хората да се заразяват, е *ужасна* идея. (Причината за това може да не е каквато си мислите. Ще обясним по-надолу.)
 
-Now, let's play the SEIR Model again, but showing R<sub>0</sub>, R over time, and the herd immunity threshold:
+Сега, нека си поиграем със SEIR модела отново, но този път изобразявайки R<sub>0</sub>, R с течение на времето и границата на колективния имунитет.
 
 <div class="sim">
 		<iframe src="sim?stage=epi-7" width="800" height="540"></iframe>
 </div>
 
-**NOTE: Total cases *does not stop* at herd immunity, but overshoots it!** And it crosses the threshold *exactly* when current cases peak. (This happens no matter how you change the settings – try it for yourself!)
+**ЗАБЕЛЕЖКА: Общият брой случаи *не спира да нараства* при постигане на колективен имунтиет ами продължава да расте!** Те превишават границата *точно* когато се достига пика на текущо заразените. (Това се случва независимо как променяте настройките - опитайте сами!)
 
-This is because when there are more non-<icon s></icon>s than the herd immunity threshold, you get R < 1. And when R < 1, new cases stop growing: a peak.
+Това е така, защото, когато броят на хората, които не са <icon s></icon>, надвиши границата необходима за колективен имунитет, се получава R < 1. А когато R < 1, броят нови случаи спира да нараства: достига върха си.
 
-**If there's only one lesson you take away from this guide, here it is** – it's an extremely complex diagram so please take time to fully absorb it:
+**Ако ще си вземете само една поука от това ръководство, нека бъде това** - диаграмата е особено комплексна, така че, моля, отделете време да я осъзнаете напълно:
 
 ![](pics/r3.png)
 
-**This means: we do NOT need to catch all transmissions, or even nearly all transmissions, to stop COVID-19!**
+**Това означава: НЯМА нужда да хванем всички заразявания, нито почти всички такива, за да спрем COVID-19!**
 
-It's a paradox. COVID-19 is extremely contagious, yet to contain it, we "only" need to stop more than 60% of infections. 60%?! If that was a school grade, that's a D-. But if R<sub>0</sub> = 2.5, cutting that by 61% gives us R = 0.975, which is R < 1, virus is contained! (exact formula:[^exact_formula])
+Това е парадокс. COVID-19 е изключително заразен и въпреки това ние трябва да предотвратим "само" над 60% от заразяванията. 60%?! Ако ставаше на въпрос за процент верни отговори на изпит в училище, оценката щеше да е 3-ка. Но ако R<sub>0</sub> = 2.5, и го намалим с 61% се получава R = 0.975, което е R < 1 и разпространението на вируса е овладяно. (точна формула:[^exact_formula])
 
-[^exact_formula]: Remember R = R<sub>0</sub> * the ratio of transmissions still allowed. Remember also that ratio of transmissions allowed = 1 - ratio of transmissions *stopped*.
+[^exact_formula]: Спомнете си, че R = R<sub>0</sub> *умножено* по процента на допуснатите заразявания. Спомнете си също, че процентът на допуснатите заразявания е = 1 - процента на *предотвратените* заразявания.
     
-    Therefore, to get R < 1, you need to get R<sub>0</sub> * TransmissionsAllowed < 1. 
+    Следователно, за да получим R < 1, трябва да накараме R<sub>0</sub> * Допуснатите Заразявания < 1. 
     
-    Therefore, TransmissionsAllowed < 1/R<sub>0</sub>
+    Следователно, Допуснатите Заразявания < 1/R<sub>0</sub>
     
-    Therefore, 1 - TransmissionsStopped < 1/R<sub>0</sub>
+    Следователно, 1 - Предотвратените Заразявания < 1/R<sub>0</sub>
     
-    Therefore, TransmissionsStopped > 1 - 1/R<sub>0</sub>
+    Следователно, Предотвратените Заразявания > 1 - 1/R<sub>0</sub>
     
-    Therefore, you need to stop more than **1 - 1/R<sub>0</sub>** of transmissions to get R < 1 and contain the virus!
+    Следователно, трябва да се предотвратят повече от **1 - 1/R<sub>0</sub>** от заразяванията, за да се постигне R < 1 и разпространението да бъде овладяно!
 
 ![](pics/r4.png)
 
-(If you think R<sub>0</sub> or the other numbers in our simulations are too low/high, that's good you're challenging our assumptions! There'll be a "Sandbox Mode" at the end of this guide, where you can plug in your *own* numbers, and simulate what happens.)
+(Ако ви се струва че R<sub>0</sub> или някоя от другите стойности в нашите симулации е твърде ниска/висока, е добре, че оспорвате нашите предположения. В края на това ръководство ще има "Свободен Режим", където може да ползвате вашите *собствени* стойности и да симулирате какво би се случило.)
 
-*Every* COVID-19 intervention you've heard of – handwashing, social/physical distancing, lockdowns, self-isolation, contact tracing & quarantining, face masks, even "herd immunity" – they're *all* doing the same thing:
+*Всяка* интервенция относно COVID-19, за която сте чули - миене на ръце, социално/физическо дистанциране, масови карантини, самоизолация, проследяване на контактите и поставяне под карантина, маски за лице, дори "колективен имунитет" - *всички* те имат една и съща цел:
 
-Getting R < 1.
+Постигане на R < 1.
 
-So now, let's use our "epidemic flight simulator" to figure this out: How can we get R < 1 in a way **that also protects our mental health *and* financial health?**
+Нека сега използваме нашите "епидемиологични симулации на разпространението", за да стигнем до следния извод: Как да постигнем R < 1 по начин, който **успява също да запази нашато психическо *и* финансово здраве?**
 
-Brace yourselves for an emergency landing...
+Дръжте се, предстои аварийно приземяване...
 
 <div class="section chapter">
     <div>
