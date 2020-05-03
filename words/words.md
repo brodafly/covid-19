@@ -2,7 +2,7 @@
     <div>
     	<iframe id="splash" width="960" height="480" src="banners/splash.html"></iframe>
         <div style="top: 70px;font-size: 75px;font-weight: bold;">
-            Какво ще се случва от тук нататък?
+            Какви са следващите стъпки?
        	</div>
 		<div style="font-weight: 500;top: 140px;left: 10px;font-size: 29px;">
 			COVID-19 развои, обяснени с интерактивни симулации
@@ -13,10 +13,10 @@
 				&nbsp;&middot;&nbsp;
 			</b>
 			от
-			<a href="https://scholar.google.com/citations?user=_wHMGkUAAAAJ&amp;hl=en">Marcel Salathé</a>
+			<a href="https://scholar.google.com/citations?user=_wHMGkUAAAAJ&amp;hl=en">Марсел Салатѐ</a>
 			(епидемиолог)
 			&
-			<a href="https://ncase.me/">Nicky Case</a>
+			<a href="https://ncase.me/">Ники Кейс</a>
 			(илюстрации/код)
 		</div>
 	</div>
