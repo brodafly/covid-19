@@ -239,298 +239,298 @@ R<sub>0</sub> за COVID-19 се изчислява на около 2.2,[^r0_cov
 <div class="section chapter">
     <div>
 		<img src="banners/curve.png" height=480 style="position: absolute;"/>
-        <div>The Next Few Months</div>
+        <div>Следващите няколко месеца</div>
     </div>
 </div>
 
-...could have been worse. Here's a parallel universe we avoided:
+...можеха да са по-зле. Ето една паралелна вселена, която избегнахме:
 
-###Scenario 0: Do Absolutely Nothing
+###Сценарий 0: Абсолютно никакви мерки
 
-Around 1 in 20 people infected with COVID-19 need to go to an ICU (Intensive Care Unit).[^icu_covid] In a rich country like the USA, there's 1 ICU bed per 3400 people.[^icu_us] Therefore, the USA can handle 20 out of 3400 people being *simultaneously* infected – or, 0.6% of the population.
+Около 1 на 20 човека заразени с COVID-19 трябва да посети интензивно отеделение.[^icu_covid] В една богата държава като САЩ има по едно легло в интензивно отделение на всеки 3400 души.[^icu_us] Следователно САЩ може да поеме 20 от 3400 *едновременно* заразени човека или 0.6% от популацията си.
 
-[^icu_covid]: ["Percentage of COVID-19 cases in the United States from February 12 to March 16, 2020 that required intensive care unit (ICU) admission, by age group"](https://www.statista.com/statistics/1105420/covid-icu-admission-rates-us-by-age-group/). Between 4.9% to 11.5% of *all* COVID-19 cases required ICU. Generously picking the lower range, that's 5% or 1 in 20. Note that this total is specific to the US's age structure, and will be higher in countries with older populations, lower in countries with younger populations.
+[^icu_covid]: ["Percentage of COVID-19 cases in the United States from February 12 to March 16, 2020 that required intensive care unit (ICU) admission, by age group"](https://www.statista.com/statistics/1105420/covid-icu-admission-rates-us-by-age-group/). Между 4.9% и 11.5% от *всички* COVID-19 заразени се нуждаят от интензивно отделение. Ако бъдем щедри и изеберем долната граница от 5%, това са 1 на всеки 20 души. Обърнете внимание, че тази стойност е специфична за възрастовото разпределение на САЩ и ще бъде по-висока при държави с по-застаряващо население и по-ниска при такива с по-младо.
 
-[^icu_us]: “Number of ICU beds = 96,596”. From [the Society of Critical Care Medicine](https://sccm.org/Blog/March-2020/United-States-Resource-Availability-for-COVID-19) USA Population was 328,200,000 in 2019. 96,596 out of 328,200,000 = roughly 1 in 3400. 
+[^icu_us]: “Number of ICU beds = 96,596”. From [the Society of Critical Care Medicine](https://sccm.org/Blog/March-2020/United-States-Resource-Availability-for-COVID-19) Популацията на САЩ е 328,200,000 за 2019. 96,596 от 328,200,000 = около 1 на 3400.
 
-Even if we *more than tripled* that capacity to 2%, here's what would've happened *if we did absolutely nothing:*
+Дори да *утроим* този капацитет до 2% от населението, ето какво щеше да се случи без *абсолютно никакви мерки:*
 
 <div class="sim">
 		<iframe src="sim?stage=int-1&format=lines" width="800" height="540"></iframe>
 </div>
 
-Not good.
+Лошо.
 
-That's what [the March 16 Imperial College report](http://www.imperial.ac.uk/mrc-global-infectious-disease-analysis/covid-19/report-9-impact-of-npis-on-covid-19/) found: do nothing, and we run out of ICUs, with more than 80% of the population getting infected. 
-(remember: total cases *overshoots* herd immunity)
+Това откри на [16. Март Имперския колеж в Лондон](http://www.imperial.ac.uk/mrc-global-infectious-disease-analysis/covid-19/report-9-impact-of-npis-on-covid-19/): без абсолютно никакви мерки капацитетът на интензивните отделения се изчерпва и над 80% от населението е заразено.
+(обърнете внимание: общият брой случай *надскача* границата на колективния имунитет)
 
-Even if only 0.5% of infected die – a generous assumption when there's no more ICUs – in a large country like the US, with 300 million people, 0.5% of 80% of 300 million = still 1.2 million dead... *IF we did nothing.*
+Дори и само 0.5% от заразените да починат - доста консервативно число при положение, че няма свободни легла в интензивните отделения - в голяма държава като САЩ с 300 милиона души, 0.5% от 80% от 300 милиона = 1.2 милиона жертви... *ако не предприемем мерки.*
 
-(Lots of news & social media reported "80% will be infected" *without* "IF WE DO NOTHING". Fear was channelled into clicks, not understanding. *Sigh.*)
+(Много от медиите съобщаваха, че "80% ще са заразят" *без* частта "ако не предприемем мерки". Страхът бе насочван в кликове, а не в разбиране.)
 
-###Scenario 1: Flatten The Curve / Herd Immunity
+###Сценарий 1: Изравняване на кривата / Колективен имунитет
 
-The "Flatten The Curve" plan was touted by every public health organization, while the United Kingdom's original "herd immunity" plan was universally booed. They were *the same plan.* The UK just communicated theirs poorly.[^yong]
+Планът за "изравняване на кривата" беше втълпяван от всичка публична здравна организация, докато оригиналният план за "колективен имунитет" на Великобритания беше критикуван от всички. Те бяха *един и същ план.* Просто Великобритания комуникира своя по лош начин.[^yong]
 
 [^yong]: “He says that the actual goal is the same as that of other countries: flatten the curve by staggering the onset of infections. As a consequence, the nation may achieve herd immunity; it’s a side effect, not an aim. [...] The government’s actual coronavirus action plan, available online, doesn’t mention herd immunity at all.”
     
-    From a [The Atlantic article by Ed Yong](https://www.theatlantic.com/health/archive/2020/03/coronavirus-pandemic-herd-immunity-uk-boris-johnson/608065/)
+    От [статията в The Atlantic на Ед Йонг](https://www.theatlantic.com/health/archive/2020/03/coronavirus-pandemic-herd-immunity-uk-boris-johnson/608065/)
 
-Both plans, though, had a literally fatal flaw.
+И двата плана, обаче, имаха един буквално фатален проблем.
 
-First, let's look at the two main ways to "flatten the curve": handwashing & physical distancing.
+Първо, нека разгледаме двата главни начина за "изравняване на кривата": миене на ръцете и физическо дистанциране.
 
-Increased handwashing cuts flus & colds in high-income countries by ~25%[^handwashing], while the city-wide lockdown in London cut close contacts by ~70%[^london]. So, let's assume handwashing can reduce R by *up to* 25%, and distancing can reduce R by *up to* 70%:
+По-честото миене на ръце намалява броя на настинки и грипове с около 25% в развитите страни[^handwashing], докато масовата карантина в Лондон намали броя на близките контакти между хората с около 70%[^london]. Нека приемем, че миенето на ръце може да намали R с *до* 25% и че дистанцирането може да намали R с *до* 70%:
 
-[^handwashing]: “All eight eligible studies reported that handwashing lowered risks of respiratory infection, with risk reductions ranging from 6% to 44% [pooled value 24% (95% CI 6–40%)].” We rounded up the pooled value to 25% in these simulations for simplicity. [Rabie, T. and Curtis, V.](https://onlinelibrary.wiley.com/doi/full/10.1111/j.1365-3156.2006.01568.x) Note: as this meta-analysis points out, the quality of studies for handwashing (at least in high-income countries) are awful.
+[^handwashing]: “All eight eligible studies reported that handwashing lowered risks of respiratory infection, with risk reductions ranging from 6% to 44% [pooled value 24% (95% CI 6–40%)].” Ние закръглихме стойността на 25% в тези симулации с цел опростяване. [Rabie, T. and Curtis, V.](https://onlinelibrary.wiley.com/doi/full/10.1111/j.1365-3156.2006.01568.x) Забележка: както този мета-анализ изтъква, качеството на проучванията относно миенето на ръце (поне в развитите държави) е ужасно.
 
-[^london]: “We found a 73% reduction in the average daily number of contacts observed per participant. This would be sufficient to reduce R0 from a value from 2.6 before the lockdown to 0.62 (0.37 - 0.89) during the lockdown”. We rounded it down to 70% in these simulations for simplicity. [Jarvis and Zandvoort et al](https://cmmid.github.io/topics/covid19/comix-impact-of-physical-distance-measures-on-transmission-in-the-UK.html)
+[^london]: “We found a 73% reduction in the average daily number of contacts observed per participant. This would be sufficient to reduce R0 from a value from 2.6 before the lockdown to 0.62 (0.37 - 0.89) during the lockdown”. Ние го закръглихме на 70% в тези симулации с цел опростяване. [Jarvis and Zandvoort et al](https://cmmid.github.io/topics/covid19/comix-impact-of-physical-distance-measures-on-transmission-in-the-UK.html)
 
-**Play with this calculator to see how % of <span class="nowrap">non-<icon s></icon>,</span> handwashing, and distancing reduce R:** (this calculator visualizes their *relative* effects, which is why increasing one *looks* like it decreases the effect of the others.[^log_caveat])
+**Ползвайте този калкулатор, за да видите как процентът <span class="nowrap">не-<icon s></icon>,</span> миенето на ръце и физическото дистанциране намалят R:** (този калкулатор визуализира техните *относителни* ефекти и затова увеличаването на един параметър *изглежда* сякаш намалява ефикасността на другите.[^log_caveat])
 
-[^log_caveat]: This distortion would go away if we plotted R on a logarithmic scale... but then we'd have to explain *logarithmic scales.*
+[^log_caveat]: This изкривяване би изчезнало, ако чертаехме R в логаритмична скала... но тогава ще трябва да обясняваме *логаритмични скали.*
 
 <div class="sim">
 		<iframe src="sim?stage=int-2a&format=calc" width="285" height="260"></iframe>
 </div>
 
-Now, let's simulate what happens to a COVID-19 epidemic if, starting March 2020, we had increased handwashing but only *mild* physical distancing – so that R is lower, but still above 1:
+Сега, нека симулираме какво би станало с COVID-19 епидемията, ако, започващо от Март 2020, бяхме увеличили миенето на ръце вкупом с *леко* физическо дистанциране, така че R да спадне, но все пак да е над 1:
 
 <div class="sim">
 		<iframe src="sim?stage=int-2&format=lines" width="800" height="540"></iframe>
 </div>
 
-Three notes:
+Три забележки:
 
-1. This *reduces* total cases! **Even if you don't get R < 1, reducing R still saves lives, by reducing the 'overshoot' above herd immunity.** Lots of folks think "Flatten The Curve" spreads out cases without reducing the total. This is impossible in *any* Epidemiology 101 model. But because the news reported "80%+ will be infected" as inevitable, folks thought total cases will be the same no matter what. *Sigh.*
+1. Това *намалява* общия брой случаи! **Дори да не постигнем R < 1, намалянето на R все пак спасява животи като ограничава надскачането над границата за колективен имунитет.** Много хора си мислят че "изравняването на кривата" просто отлага случаите на заразени без да намаля общия им брой. Това е невъзможно, в *който и да е* епидемиологичен модел. Но тъй като новините съобщаваха, че "80%+ ще бъдат заразени" като нещо неизбежно, хората повярваха, че общия брой случаи, ще е един и същ каквото и да предприемем.
 
-2. Due to the extra interventions, current cases peak *before* herd immunity is reached. In fact, in this simulation, total cases only overshoots *a tiny bit* above herd immunity – the UK's plan! At that point, R < 1, you can let go of all other interventions, and COVID-19 stays contained! Well, except for one problem...
+2. Поради предприетите мерки, текущият брой случаи достига своя връх *преди* постигането на колективен имунитет. Всъщност в тази симулация общият брой случаи надскача само *с малко* границата на колективния имунитет - планът на Великобритания! В този момент, R < 1 и може да се преустановат всякакви мерки, а разпространението на COVID-19 да остане под контрол. Само че има един проблем...
 
-3. You still run out of ICUs. For several months. (and remember, we *already* tripled ICUs for these simulations)
+3. Капацитетът на интензивните отделения е надхвърлен. За няколко месеца. (и помнете, че *вече утроихме* капацитета за тези симулации)
 
-That was the other finding of the March 16 Imperial College report, which convinced the UK to abandon its original plan. Any attempt at **mitigation** (reduce R, but R > 1) will fail. The only way out is **suppression** (reduce R so that R < 1).
+Това беше другото откритие в доклада от 16. Март на Имперския колеж, което убеди Великобриатния да се откаже от оригиналния си план. Всеки опит за *смекчаване* (намаляне на R, но R > 1) ще се провали. Единственият изход е **потискането** (намаляне на R, така че R < 1).
 
 ![](pics/mitigation_vs_suppression.png)
 
-That is, don't merely "flatten" the curve, *crush* the curve. For example, with a...
+Това означава не просто "изравняване" на кривата, а *смазване* на кривата. Например с...
 
-###Scenario 2: Months-Long Lockdown
+###Сценарий 2: Масова карантина с месеци:
 
-Let's see what happens if we *crush* the curve with a 5-month lockdown, reduce <icon i></icon> to nearly nothing, then finally – *finally* – return to normal life:
+Нека видим какво става, ако *смажем* кривата със 5-месечна масова карантина, намалим броя <icon i></icon> до почти нула и най-накрая - *най-накрая* - се върнем към нормален живот:
 
 <div class="sim">
 		<iframe src="sim?stage=int-3&format=lines" width="800" height="540"></iframe>
 </div>
 
-Oh.
+Опа.
 
-This is the "second wave" everyone's talking about. As soon as we remove the lockdown, we get R > 1 again. So, a single leftover <icon i></icon> (or imported <span class="nowrap"><icon i></icon>)</span> can cause a spike in cases that's almost as bad as if we'd done Scenario 0: Absolutely Nothing.
+Това е "втората вълна", за която всички говорят. Веднага щом премахнем масовата карантина отново получаваме R > 1. Значи само един останал <icon i></icon> (или внесен от друго място <span class="nowrap"><icon i></icon>)</span> може да доведе до пик на случаите, който е почти толкова лош, колкото, ако бяхме в Сценарий 0: Абсолютно никакви мерки.
 
-**A lockdown isn't a cure, it's just a restart.**
+**Масовата карантина не е лек, а само шанс за ново начало.**
 
-So, what, do we just lockdown again & again?
+Ами сега, просто да продължаваме с масови карантини ли?
 
-###Scenario 3: Intermittent Lockdown
+###Сценарий 3: Периодични масови карантини
 
-This solution was first suggested by the March 16 Imperial College report, and later again by a Harvard paper.[^lockdown_harvard]
+Това решение беше предложено за пръв в доклада от 16. Март на Имперския колеж и след това в публикация от Харвардския университет.[^lockdown_harvard]
 
 [^lockdown_harvard]: “Absent other interventions, a key metric for the success of social distancing is whether critical care capacities are exceeded. To avoid this, prolonged or intermittent social distancing may be necessary into 2022.” [Kissler and Tedijanto et al](https://science.sciencemag.org/content/early/2020/04/14/science.abb5793)
 
-**Here's a simulation:** (After playing the "recorded scenario", you can try simulating your *own* lockdown schedule, by changing the sliders *while* the simulation is running! Remember you can pause & continue the sim, and change the simulation speed)
+**Ето симулация:** (След като пуснете "записания сценарий" може да опитате да симулирате ваш *собствен* режим за масови карантини като променяте плъзгачите за параметрите *докато* тече симулацията! Помнете, че може да паузирате & пускате отново симулацията, както и да променяте скоростта ѝ.)
 
 <div class="sim">
 		<iframe src="sim?stage=int-4&format=lines" width="800" height="540"></iframe>
 </div>
 
-This *would* keep cases below ICU capacity! And it's *much* better than an 18-month lockdown until a vaccine is available. We just need to... shut down for a few months, open up for a few months, and repeat until a vaccine is available. (And if there's no vaccine, repeat until herd immunity is reached... in 2022.)
+Тов *би* задържало броя на текущите случаи под максималния капацитет на интензивните отделения. А и е *много* по-добре от 18-месечна масова карантина докато се направи ваксина. Просто трябва... да затворим за няколко месеца, да отворим за няколко месеца и да повтаряме това докато не имаме ваксина. (Ако не получим ваксина, повтаряме докато постигнем колективен имунитет... през 2022.)
 
-Look, it's nice to draw a line saying "ICU capacity", but there's lots of important things we *can't* simulate here. Like:
+Обаче вижте, хубаво е да начертаем граница обозначаваща "капацитета на интензивните отделения", но има и много други важни фактори, които *не можем* да симулираме тук. Като:
 
-**Mental Health:** Loneliness is one of the biggest risk factors for depression, anxiety, and suicide. And it's as associated with an early death as smoking 15 cigarettes a day.[^loneliness]
+**Психическо здраве:** Самотата е един от най-значимите рискови фактори за депресия, тревога и самоубийство. Тя се асоциира с настъпването на ранна смърт така, както пушенето по 15 цигари на ден.[^loneliness]
 
-[^loneliness]: See [Figure 6 from Holt-Lunstad & Smith 2010](https://journals.sagepub.com/doi/abs/10.1177/1745691614568352). Of course, big disclaimer that they found a *correlation*. But unless you want to try randomly assigning people to be lonely for life, observational evidence is all you're gonna get.
+[^loneliness]: Вижте [Фигура 6 от Холт-Лунстед и Смит 2010](https://journals.sagepub.com/doi/abs/10.1177/1745691614568352). Разбира се, голяма забележка е, че те откриват *корелация*. Но освен, ако не искате да опитате на случаен принцип да накарате хора да се чувстат самотни за цял живот, емпиричните данни са единствения ви избор.
 
-**Financial Health:** "What about the economy" sounds like you care more about dollars than lives, but "the economy" isn't just stocks: it's people's ability to provide food & shelter for their loved ones, to invest in their kids' futures, and enjoy arts, foods, videogames – the stuff that makes life worth living. And besides, poverty *itself* has horrible impacts on mental and physical health.
+**Финансово здраве:** Когато попитате "Ами икономиката?" звучи сякаш се интересувате повече от пари отколкото от човешките животи, но "икономиката" не е само акции: тя е възможността на хората да осигуряват храна и подслон за техните близки, да инвестират в бъдещето на децата си, да се наслаждават на изкуство, храна, видеогири - нещата, които придават смисъл на живота. Освен това бедността *сама по себе си* влияе по ужасен начин на психическото и физическото здраве.
 
-Not saying we *shouldn't* lock down again! We'll look at "circuit breaker" lockdowns later. Still, it's not ideal.
+Не казваме, че *не трябва* да предприемаме масови карантини повече! Ще видим примери за така наречените масови карантини тип "прекъсвач" по-надолу. Все пак не е оптимално.
 
-But wait... haven't Taiwan and South Korea *already* contained COVID-19? For 4 whole months, *without* long-term lockdowns?
+Но чакайте... Тайван и Южна Корея не овладяха ли *вече* COVID-19? За цели 4 месеца *без* дългосрочни масови карантини?
 
-How?
+Как?
 
-###Scenario 4: Test, Trace, Isolate
+###Сценарий 4: Тестване, проследяване, изолиране
 
-*"Sure, we \*could've\* done what Taiwan & South Korea did at the start, but it's too late now. We missed the start."*
+*"Разбира се, ние \*можехме\* да направим като Тайван и Южна Корея от самото начало, но вече е твърде късно за това. Изпуснахме старта."*
 
-But that's exactly it! “A lockdown isn't a cure, it's just a restart”... **and a fresh start is what we need.**
+Но чакайте... точно така! "Масовата карантина не е лек, а само шанс за ново начало"... **и ние имаме нужда точно от ново начало.**
 
-To understand how Taiwan & South Korea contained COVID-19, we need to understand the exact timeline of a typical COVID-19 infection[^timeline]:
+За да разберем как Тайван и Южна Корея овладяха COVID-19, трябва точно да проследим как протича типчно заразяване с COVID-19[^timeline]:
 
-[^timeline]: **3 days on average to infectiousness:** “Assuming an incubation period distribution of mean 5.2 days from a separate study of early COVID-19 cases, we inferred that infectiousness started from 2.3 days (95% CI, 0.8–3.0 days) before symptom onset” (translation: Assuming symptoms start at 5 days, infectiousness starts 2 days before = Infectiousness starts at 3 days) [He, X., Lau, E.H.Y., Wu, P. et al.](https://www.nature.com/articles/s41591-020-0869-5)  
+[^timeline]: **средно 3 дена до заразност:** “Assuming an incubation period distribution of mean 5.2 days from a separate study of early COVID-19 cases, we inferred that infectiousness started from 2.3 days (95% CI, 0.8–3.0 days) before symptom onset” (превод: ако приемем, че симпотимте се проявяват на 5-ия ден, заразността започва 2 дена преди това = Заразността започва на 3-тия ден) [He, X., Lau, E.H.Y., Wu, P. et al.](https://www.nature.com/articles/s41591-020-0869-5)
     
-    **4 days on average to infecting someone else:** “The mean [serial] interval was 3.96 days (95% CI 3.53–4.39 days)” [Du Z, Xu X, Wu Y, Wang L, Cowling BJ, Ancel Meyers L](https://wwwnc.cdc.gov/eid/article/26/6/20-0357_article)
+    **средно 4 дена до заразяването на някой друг:** “The mean [serial] interval was 3.96 days (95% CI 3.53–4.39 days)” [Du Z, Xu X, Wu Y, Wang L, Cowling BJ, Ancel Meyers L](https://wwwnc.cdc.gov/eid/article/26/6/20-0357_article)
     
-    **5 days on average to feeling symptoms:** “The median incubation period was estimated to be 5.1 days (95% CI, 4.5 to 5.8 days)” [Lauer SA, Grantz KH, Bi Q, et al](https://annals.org/AIM/FULLARTICLE/2762808/INCUBATION-PERIOD-CORONAVIRUS-DISEASE-2019-COVID-19-FROM-PUBLICLY-REPORTED)
+    **средно 5 дена до проявяването на симптоми:** “The median incubation period was estimated to be 5.1 days (95% CI, 4.5 to 5.8 days)” [Lauer SA, Grantz KH, Bi Q, et al](https://annals.org/AIM/FULLARTICLE/2762808/INCUBATION-PERIOD-CORONAVIRUS-DISEASE-2019-COVID-19-FROM-PUBLICLY-REPORTED)
 
 ![](pics/timeline1.png)
 
-If cases only self-isolate when they know they're sick (that is, they feel symptoms), the virus can still spread:
+Ако заразените се самоизолират само когато вече знаят, че са болни (тоест имат симптоми), вирусът все още може да се разпространи:
 
 ![](pics/timeline2.png)
 
-And in fact, 44% of all transmissions are like this: *pre*-symptomatic! [^pre_symp]
+И на практика 44% от всички заразявания са такива: преди проявяване на симптомите! [^pre_symp]
 
 [^pre_symp]: “We estimated that 44% (95% confidence interval, 25–69%) of secondary cases were infected during the index cases’ presymptomatic stage” [He, X., Lau, E.H.Y., Wu, P. et al](https://www.nature.com/articles/s41591-020-0869-5)
 
-But, if we find *and quarantine* a symptomatic case's recent close contacts... we stop the spread, by staying one step ahead!
+Но, ако намерим *и поставим в карантина* близките контакти на хората със симпотми... спираме разпространението като оставаме една стъпка напред!
 
 ![](pics/timeline3.png)
 
-This is called **contact tracing**. It's an old idea, was used at an unprecedented scale to contain Ebola[^ebola], and now it's core part of how Taiwan & South Korea are containing COVID-19!
+Това се нарича **проследяване на контактите**. Това е стара идея, използвана в безпрецедентен мащаб за овладяването на еболата[^ebola], и сега тя е основна част от това как Тайван и Южна Корея овладяват COVID-19!
 
 [^ebola]: “Contact tracing was a critical intervention in Liberia and represented one of the largest contact tracing efforts during an epidemic in history.” [Swanson KC, Altare C, Wesseh CS, et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6152989/)
 
-(It also lets us use our limited tests more efficiently, to find pre-symptomatic <span class="nowrap"><icon i></icon>s</span> without needing to test almost everyone.)
+(Това също ни позволява да изпозлваме ограничения брой тестове по-ефективно, за да намерим <icon i></icon> преди да започнат да проявяват симптоми без да има нужда от тестване на почти всички.)
 
-Traditionally, contacts are found with in-person interviews, but those *alone* are too slow for COVID-19's ~48 hour window. That's why contact tracers need help, and be supported by – *NOT* replaced by – contact tracing apps.
+Традиционно контактите се откриват чрез интервюта, но те *сами по себе си* са твърде бавни за 48-часовия прозорец на COVID-19. Затова хората проследяващи контактите имат нужда от помощ и от това да бъдат подпомагани от - *не* заменени от - приложения за проследяване на контактите.
 
-(This idea didn't come from "techies": using an app to fight COVID-19 was first proposed by [a team of Oxford epidemiologists](https://science.sciencemag.org/content/early/2020/04/09/science.abb6936).)
+(Тази идея на идва от "технофилите": изпозлванто на приложение за борбата с COVID-19 бе предложено за пръв път от [екип епидемиолози в Оксфорд](https://science.sciencemag.org/content/early/2020/04/09/science.abb6936).)
 
-Wait, apps that trace who you've been in contact with?... Does that mean giving up privacy, giving in to Big Brother?
+Но чакайте, приложенията проследяват с кого си бил в контакт нали?... Това означава ли, че губим поверителността си и я слагаме в ръцете на Големия брат?
 
-Heck no! **[DP-3T](https://github.com/DP-3T/documents#decentralized-privacy-preserving-proximity-tracing)**, a team of epidemiologists & cryptographers (including one of us, Marcel Salathé) is *already* making a contact tracing app – with code available to the public – that reveals **no info about your identity, location, who your contacts are, or even *how many contacts* you've had.**
+Разбира се, че не! **[DP-3T](https://github.com/DP-3T/documents#decentralized-privacy-preserving-proximity-tracing)** - екип от епидемиолози и шифровачи (включващ един от нас, Марсел Салатѐ) *вече* разработва приложение - чийто код е общодостъпен - за проследяване на контактите, което не разкрива **никаква инфорамция за вашата самоличност, локация, имена на контактите или дори *колко на брой* контакти сте имали.**
 
-Here's how it works:
+Ето как работи:
 
 ![](pics/dp3t.png)
 
-([Here's the full comic](https://ncase.me/contact-tracing/). Details about "pranking"/false positives/etc in footnote:[^dp3t_details])
+([Ето целия комикс](https://ncase.me/contact-tracing/). Детайли относно "пранкинг", лъжливо положителни резултати и други в бележката:[^dp3t_details])
 
-[^dp3t_details]: To prevent "pranking" (people falsely claiming to be infected), the DP-3T Protocol requires that the hospital first give you a One-Time Passcode that lets you upload your messages.
+[^dp3t_details]: За предотвратяването на т.нар. "пранкинг" (хора, които лъжат, че са заразени) DP-3T протоколът изисква болницата да ти издаде еднократен код, чрез който да прикачиш своите съобщения.
     
-    False positives are a problem in both manual & digital contact tracing. Still, we can reduce false positives in 2 ways: 1) By notifying Bobs only if they heard, say, 30+ min worth of messages, not just one message in passing. And 2) If the app *does* think Bob's been exposed, it can refer Bob to a *manual* contact tracer, for an in-depth follow-up interview.
+    Лъжливо положитлените са проблем, както при физическото, така и при дигитлното проследяване на контакти. Все пак можем да намалим броя на лъжливо положителните по 2 начина: 1) като оповестяваме хората само ако са чули 30+ минути съобщения, а не само 1 случайно съобщение. И 2) ако приложението *предполага*, че човек е бил изложен, да го препрати към *физически* проследител на контактите за последващо интервю.
     
-    For other issues like data bandwidth, source integrity, and other security issues, check out [the open-source DP-3T whitepapers!](https://github.com/DP-3T/documents#decentralized-privacy-preserving-proximity-tracing)
+    За повече информация като нужно количество данни, валидност на източника и други въпроси за сигурността вижте [общодостъпните технически документи на DP-3T!](https://github.com/DP-3T/documents#decentralized-privacy-preserving-proximity-tracing)
 
-Along with similar teams like TCN Protocol[^tcn] and MIT PACT[^pact], they've inspired Apple & Google to bake privacy-first contact tracing directly into Android/iOS.[^gapple] (Don't trust Google/Apple? Good! The beauty of this system is it doesn't *need* trust!) Soon, your local public health agency may ask you to download an app. If it's privacy-first with publicly-available code, please do!
+Наред с подобни екипи като TCN Protocol[^tcn] и MIT PACT[^pact], те вдъхновяват Епъл и Гугъл да въведат проследяване на контактите, акцентирайки върху анонимността, в опреационните им системи Android и iOS.[^gapple] (Не вярвате на Гугъл/Епъл? Добре! Хубавото на тази система е, че тя не се *нуждае* от доверие!) Скоро вашите собствени агенции по здравеопазването може да ви помолят да изтеглите дадено приложение. Ако то акцентира върху анонимостта и е с общодостъпна код база, моля направете го!
 
 [^tcn]: [Temporary Contact Numbers, a decentralized, privacy-first contact tracing protocol](https://github.com/TCNCoalition/TCN#tcn-protocol)
 
 [^pact]: [PACT: Private Automated Contact Tracing](https://pact.mit.edu/)
 
-[^gapple]: [Apple and Google partner on COVID-19 contact tracing technology ](https://www.apple.com/ca/newsroom/2020/04/apple-and-google-partner-on-covid-19-contact-tracing-technology/). Note they're not making the apps *themselves*, just creating the systems that will *support* those apps.
+[^gapple]: [Apple and Google partner on COVID-19 contact tracing technology ](https://www.apple.com/ca/newsroom/2020/04/apple-and-google-partner-on-covid-19-contact-tracing-technology/). Имайте предвид, че те не разработват *самите* приложения, а просто създават системи, които ще ги *подпомогнат*.
 
-But what about folks without smartphones? Or infections through doorknobs? Or "true" asymptomatic cases? Contact tracing apps can't catch all transmissions... *and that's okay!* We don't need to catch *all* transmissions, just 60%+ to get R < 1.
+Ами хората без смартфони? Или пък заразяванията чрез докосване на брави? Или заразени без каквито и да е симптоми? Приложенията за проследяване на контаките не могат да хванат взички заразявания... *и това е приемливо!* Не трябва да хванем *всички* заразявания, а само 60%+, за да постигнем R < 1.
 
-(Footnote rant about the confusion between pre-symptomatic vs "true" asymptomatic – "true" asymptomatics are rare:[^rant])
+(Бележка относно объркването на пред-симптоматични (преди да проявят симптоми) и "истниски" асимптомпатични (които не проявяват симпотми) - "истниските" асимптомпатични случаи са редки:[^rant])
 
-[^rant]: Lots of news reports – and honestly, many research papers – did not distinguish between "cases who showed no symptoms when we tested them" (pre-symptomatic) and "cases who showed no symptoms *ever*" (true asymptomatic). The only way you could tell the difference is by following up with cases later.
-   
-    Which is what [this study](https://wwwnc.cdc.gov/eid/article/26/8/20-1274_article) did. (Disclaimer: "Early release articles are not considered as final versions.") In a call center in South Korea that had a COVID-19 outbreak, "only 4 (1.9%) remained asymptomatic within 14 days of quarantine, and none of their household contacts acquired secondary infections."
-    
-    So that means "true asymptomatics" are rare, and catching the disease from a true asymptomatic may be even rarer!
+[^rant]: Много новини - и честно казано, много научни трудове - не правят разликата между "случаи, които не проявяват симптоми по време на тестването" (пред-симптоматични) и "случаи, които *никога* не проявяват симптоми" (истински асимптоматични). Единствения начин да се различат двете е като се направи последваща справка със заразените.
 
-Isolating *symptomatic* cases would reduce R by up to 40%, and quarantining their *pre/a-symptomatic* contacts would reduce R by up to 50%[^oxford]:
+    Точно това прави [следното проучване](https://wwwnc.cdc.gov/eid/article/26/8/20-1274_article). (Забележка: "Предварителните публикации не се считат за финални версии.") В колцентър в Южна Корея където е имало масово COVID-19 заразяване, "само 4 (1.9%) от хората останали асимптоматични за периода от 14-дневна карантина и нито един от техните близки контакти в домакинството бива заразен."
 
-[^oxford]: From the same Oxford study that first recommended apps to fight COVID-19: [Luca Ferretti & Chris Wymant et al](https://science.sciencemag.org/content/early/2020/04/09/science.abb6936/tab-figures-data) See Figure 2. Assuming R<sub>0</sub> = 2.0, they found that:    
-    
-    * Symptomatics contribute R = 0.8 (40%)
-    * Pre-symptomatics contribute R = 0.9 (45%)
-    * Asymptomatics contribute R = 0.1 (5%, though their model has uncertainty and it could be much lower)
-    * Environmental stuff like doorknobs contribute R = 0.2 (10%)
+    Това означава, че "истниските асимптоматични" случаи са редки и шансът за зарязване от такъв случай може да е дори още по-малък!
 
-    And add up the pre- & a-symptomatic contacts (45% + 5%) and you get 50% of R!
+Изолирането на *симпоматични* случаи би намалило R с до 40% и поставянето под карантина на техните *пред-/асимптоматични* контакти би намалило R с до 50%[^oxford]:
+
+[^oxford]: От същото проучване на Оксфорд, кеото препоръча приложения за борбата с COVID-19: [Luca Ferretti & Chris Wymant et al](https://science.sciencemag.org/content/early/2020/04/09/science.abb6936/tab-figures-data) Виж Фигура 2. Приемайки R<sub>0</sub> = 2.0 те откриват:
+
+    * Симптоматичните случаи допринасят R = 0.8 (40%)
+    * Предсимптоматичните случаи допринасят R = 0.9 (45%)
+    * Асимптоматичните допринасят R = 0.1 (5%, въпреки че техния модел има несигурност и това число може да е много по-ниско)
+    * Фактори от околната страна като докосване на брави, например, допринасят R = 0.2 (10%)
+
+    Събирайки пред- и асимптоматичните контакти (45% + 5%) получавате 50% от R!
 
 <div class="sim">
 		<iframe src="sim?stage=int-4a&format=calc" width="285" height="340"></iframe>
 </div>
 
-Thus, even without 100% contact quarantining, we can get R < 1 *without a lockdown!* Much better for our mental & financial health. (As for the cost to folks who have to self-isolate/quarantine, *governments should support them* – pay for the tests, job protection, subsidized paid leave, etc. Still way cheaper than intermittent lockdown.)
+Така че, дори без да поставяме 100% от контактите под карантина, можем да постигнем R < 1 *без предприемането на масови карантини(изнвъредни мерки)!* Това е много по-добре за нашето психическо и финансово здарве. (*Правителствата трябва да подкрепят* хората, които са поставени в ситуация на самоизолация/карантина - покриването на разходи по тестове, съхранение на работните места, субсидирани платени откпуски и т.н. Всичко това излиза много по-евтино от периодични масови карантини.)
 
-We then keep R < 1 until we have a vaccine, which turns susceptible <span class="nowrap"><icon s></icon>s</span> into immune <span class="nowrap"><icon r></icon>s.</span> Herd immunity, the *right* way:
+Тогава трябва да поддържаме R < 1 докато имаме ваксина, която превръща <icon s></icon> в <icon r></icon> с имунитет. Колективен имунитет, постигнат по *правилния* начин:
 
 <div class="sim">
 		<iframe src="sim?stage=int-4b&format=calc" width="285" height="230"></iframe>
 </div>
 
-(Note: this calculator pretends the vaccines are 100% effective. Just remember that in reality, you'd have to compensate by vaccinating *more* than "herd immunity", to *actually* get herd immunity)
+(Забележка: този калкукатор работи с презумпцията, че ваксините са 100% ефективни. Помнете, че в реалността ще трябва да се компенсира като се ваксинира *повече* отколкото е границата за "колективен имунитет", за да може *всъщност да се постигне* колективен имунитет)
 
-Okay, enough talk. Here's a simulation of:
+Добре, стига приказки. Ето симулация на:
 
-1. A few-month lockdown, until we can...
-2. Switch to "Test, Trace, Isolate" until we can...
-3. Vaccinate enough people, which means...
-4. We win.
+1. Няколко месечна масова карантина докато успеем да...
+2. Минем в режим на "Тестване, проследване, изолиране" и успеем да...
+3. Ваксинираме достатъчно хора, което означава, че...
+4. Побеждаваме.
 
 <div class="sim">
 		<iframe src="sim?stage=int-5&format=lines" width="800" height="540"></iframe>
 </div>
 
-So that's it! That's how we make an emergency landing on this plane.
+Това е! Ето как праим аварийно презимяване на този самолет.
 
-That's how we beat COVID-19.
+Така побеждаваме COVID-19.
 
 ...
 
-But what if things *still* go wrong? Things have gone horribly wrong already. That's fear, and that's good! Fear gives us energy to create *backup plans*.
+Ами ако нещата *въпреки това* се объркат? Нещата са ужасно объркани и в момента. Този страх е хубав! Страхът ни дава енергията да създадем *резервни планове*.
 
-The pessimist invents the parachute.
+Песимистът изобретява парашута.
 
-###Scenario 4+: Masks For All, Summer, Circuit Breakers
+###Сценарий 4+: Маски за всички, лятото, прекъсвачи
 
-What if R<sub>0</sub> is way higher than we thought, and the above interventions, even with mild distancing, *still* aren't enough to get R < 1?
+Ами, ако R<sub>0</sub> е много по-голямо отколкото си мислим и горните мерки, дори с леко дистанциране, *все пак* не са достатъчни, да докараме R <1?
 
-Remember, even if we can't get R < 1, reducing R still reduces the "overshoot" in total cases, thus saving lives. But still, R < 1 is the ideal, so here's a few other ways to reduce R:
+Помнете, дори и да не докараме R < 1, намалянето на R все пак намалява "надскачането" в брой общи случаи, което спасява животи. Но все пак R < 1 е идеалът, така че ето още няколко начина да намалим R:
 
-**Masks For All:**
+**Маски за всички:**
 
-*"Wait,"* you might ask, *"I thought face masks don't stop you from getting sick?"*
+- *"Чакай,"* - може да кажете - *"Мислех си, че маските не те предпазват от това да се разболееш?"*
 
-You're right. Masks don't stop you from getting sick[^incoming]... they stop you from getting *others* sick.
+Прави сте. Маските не те предпазват от разболяване[^incoming]... те предпазват *другите* от това да бъдат заразени.
 
 [^incoming]: “None of these surgical masks exhibited adequate filter performance and facial fit characteristics to be considered respiratory protection devices.” [Tara Oberg & Lisa M. Brosseau](https://www.sciencedirect.com/science/article/pii/S0196655307007742)
 
 [^outgoing]: “The overall 3.4 fold reduction [70% reduction] in aerosol copy numbers we observed combined with a nearly complete elimination of large droplet spray demonstrated by Johnson et al. suggests that surgical masks worn by infected persons could have a clinically significant impact on transmission.” [Milton DK, Fabian MP, Cowling BJ, Grantham ML, McDevitt JJ](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3591312/)
 
-[^homemade]: [Davies, A., Thompson, K., Giri, K., Kafatos, G., Walker, J., & Bennett, A](https://www.cambridge.org/core/journals/disaster-medicine-and-public-health-preparedness/article/testing-the-efficacy-of-homemade-masks-would-they-protect-in-an-influenza-pandemic/0921A05A69A9419C862FA2F35F819D55) See Table 1: a 100% cotton T-shirt has around 2/3 the filtration efficiency as a surgical mask, for the two bacterial aerosols they tested.
+[^homemade]: [Davies, A., Thompson, K., Giri, K., Kafatos, G., Walker, J., & Bennett, A](https://www.cambridge.org/core/journals/disaster-medicine-and-public-health-preparedness/article/testing-the-efficacy-of-homemade-masks-would-they-protect-in-an-influenza-pandemic/0921A05A69A9419C862FA2F35F819D55) Виж Таблица 1:: тениска от 100% памук има 2/3 от филтриращата ефикасност на хирургическа маска за двата вида бактериални аерозоли, с които е напревен теста.
 
 ![](pics/masks.png)
 
-To put a number on it: surgical masks *on the infectious person* reduce cold & flu viruses in aerosols by 70%.[^outgoing] Reducing transmissions by 70% would be as large an impact as a lockdown!
+За да поставим число на ефикасността: хирургическите маски *носени от инфекциозен човек* намаляват количеството вируси на настинка и грип в аерозоли със 70%.[^outgoing] Намаляването на заразяванията със 70% би имало толкова ефективно колкото масова карантина! 
 
-However, we don't know for sure the impact of masks on COVID-19 *specifically*. In science, one should only publish a finding if you're 95% sure of it. (...should.[^replication]) Masks, as of May 1st 2020, are less than "95% sure".
+Но все още не знаем със сигурност ефекта от тези маски за COVID-19 *конкретно*. В науката човек трябва да публикува своето откритие само, ако е сигурен на 95% в него. (...трябва.[^replication]) Маските до 1. Май 2020 все още не са "95% сигурни".
 
-[^replication]: Any actual scientist who read that last sentence is probably laugh-crying right now. See: [p-hacking](https://en.wikipedia.org/wiki/Data_dredging), [the replication crisis](https://en.wikipedia.org/wiki/Replication_crisis))
+[^replication]: Някой истински учен, който чете последното изречение, най-вероятно вече избухва в смях. Вижте: [p-hacking/хавкане на стойността "p"](https://en.wikipedia.org/wiki/Data_dredging), the replication crisis](https://en.wikipedia.org/wiki/Replication_crisis))
 
-However, pandemics are like poker. **Make bets only when you're 95% sure, and you'll lose everything at stake.** As a recent article on masks in the British Medical Journal notes,[^precautionary] we *have* to make cost/benefit analyses under uncertainty. Like so:
+Обаче пандемиите са като покера. **Ако правиш залози само когато си на 95% сигурен, ще загубиш всичко.** Както една скорошна публикация относно маските в Бритнаския мединциски журнал подчертава,[^precautionary] *трябва* да анализираме цената и потенцилните ползи от нещата дори да нямаме пълната информация. Ето така:
 
 [^precautionary]: “It is time to apply the precautionary principle” [Trisha Greenhalgh et al \[PDF\]](https://www.bmj.com/content/bmj/369/bmj.m1435.full.pdf)
 
-Cost: If homemade cloth masks (which are ~2/3 as effective as surgical masks[^homemade]), super cheap. If surgical masks, more expensive but still pretty cheap.
+Цена: Ако ще ползваме домашно изработените маски (които са с около 2/3 от ефикасността на хирургичните[^homemade]), излиза изключително евтино. Ако ползваме хирургически маски, излиза по-скъпо, но пак е доста евтино.
 
-Benefit: Even if it's a 50–50 chance of surgical masks reducing transmission by 0% or 70%, the average "expected value" is still 35%, same as a half-lockdown! So let's guess-timate that surgical masks reduce R by up to 35%, discounted for our uncertainty. (Again, you can challenge our assumptions by turning the sliders up/down)
+Ползи: Дори да има 50 на 50 шанс хирургическите маски да намаляват заразяванията с 0% или 70%, средната "очаквана полза" остава около 35%. Същото като половин масова карантина! Така че нека предположим, че хирургическите намаляат R с до 35% имайки предвид тази несигурност. (Отново обръщаме внимание, че може да оспорвате нашите предположения като променяте стойностите на параметрите)
 
 <div class="sim">
 		<iframe src="sim?stage=int-6a&format=calc" width="285" height="380"></iframe>
 </div>
 
-(other arguments for/against masks:[^mask_args])
+(други аргументи за/против маските:[^mask_args])
 
-[^mask_args]: **"We need to save supplies for hospitals."** *Absolutely agreed.* But that's more of an argument for increasing mask production, not rationing. In the meantime, we can make cloth masks.
+[^mask_args]: **"Трябва да запазим наличност за болниците."** *Абсолютно сме съгласни.* Но това е по-скоро аргумент да увеличим производството на маски, а не да ограничим наличността им. Междувременно можем да правим платнени маски.
 
-   **"They're hard to wear correctly."** It's also hard to wash your hands according to the WHO Guidelines – seriously, "Step 3) right palm over left dorsum"?! – but we still recommend handwashing, because imperfect is still better than nothing.
-   
-   **"It'll make people more reckless with handwashing & social distancing."** Sure, and safety belts make people ignore stop signs, and flossing makes people eat rocks. But seriously, we'd argue the opposite: masks are a *constant physical reminder* to be careful – and in East Asia, masks are also a symbol of solidarity!
+   **"Трудно е да се носят правилно."** Миенето на ръцете също е трудно според наръчника на СЗО (Световната здравна организация) - не се шегуваме, "Стъпка 3) дясна длан над левия дорсум"?! - но все пак препоръваме миене на ръцете, защото дори да не е направено перфектно пак е по-добре от нищо.
+
+   **"Ще накарат хората да са по-небрежни с миенето на ръцете и социалното дистанциране."** Разбира се. И коланите карат хората да забравят знаците "Стоп"" и ползването на конец за зъби кара хората да ядат камъни. Но нека бъдем сериозни, ние мислим, че е точно обратното: маските са *постоянно физическо напомняне", че трябва да внимаваме, а в Източна Азия маските са символ на солидарност!
     
     
 
-Masks *alone* won't get R < 1. But if handwashing & "Test, Trace, Isolate" only gets us to R = 1.10, having just 1/3 of people wear masks would tip that over to R < 1, virus contained!
+Маските *сами по себе си* няма да докарат R < 1. Но ако миенето на ръце и процесът на "тестване, проследяване, изолиране" ни докарат до R = 1.10, то, ако накараме 1/3 от хората да носят маски, това би помогнало да достигнем R < 1 и вирусът да е овладян!
 
-**Summer:**
+**Лятото:**
 
-Okay, this isn't an "intervention" we can control, but it will help! Some news outlets report that summer won't do anything to COVID-19. They're half right: summer won't get R < 1, but it *will* reduce R.
+Добре, това не "мярка", която можем да контролираме, но тя ще помогне! Някои медии казват, че лятото няма да помогне с каквото и да е за COVID-19. Те са наполовина прави: лятото няма да докара R < 1, но *ще* намали R.
 
-For COVID-19, every extra 1° Celsius (1.8° Fahrenheit) makes R drop by 1.2%.[^heat] The summer-winter difference in New York City is 26°C (47°F),[^nyc_heat] so summer will make R drop by ~31%.
+За COVID-19, всеки допълнителен 1° по Целзий (1.8° по Фаренхайт) кара R да спадне с 1.2%.[^heat] Разликата в температурата между лятото и зимата в Ню Йорк е 26°C (47°F),[^nyc_heat] така че лятото ще понижи R с около ~31%.
 
 [^heat]: “One-degree Celsius increase in temperature [...] lower[s] R by 0.0225” and “The average R-value of these 100 cities is 1.83”. 0.0225 ÷ 1.83 = ~1.2%. [Wang, Jingyuan and Tang, Ke and Feng, Kai and Lv, Weifeng](https://papers.ssrn.com/sol3/Papers.cfm?abstract_id=3551767)
 
@@ -540,43 +540,44 @@ For COVID-19, every extra 1° Celsius (1.8° Fahrenheit) makes R drop by 1.2%.[^
 		<iframe src="sim?stage=int-6b&format=calc" width="285" height="220"></iframe>
 </div>
 
-Summer alone won't make R < 1, but if we have limited resources, we can scale back some interventions in the summer – so we can scale them *higher* in the winter.
+Лятото само по себе си няма да накара R < 1, но, ако имаме ограничени ресурси, можем да отпуснем някои мерки през лятото, така че да ги *затегнем* зимата.
 
-**A "Circuit Breaker" Lockdown:**
+**Масова карантина тип "прекъсвач":**
 
+И ако всичко това *все още* не е достатъчно за постигане на R < 1... можем да направим още една масова карантина.
 And if all that *still* isn't enough to get R < 1... we can do another lockdown.
 
-But we wouldn't have to be 2-months-closed / 1-month-open over & over! Because R is reduced, we'd only need one or two more "circuit breaker" lockdowns before a vaccine is available. (Singapore had to do this recently, "despite" having controlled COVID-19 for 4 months. That's not failure: this *is* what success takes.)
+Но няма да има нужда да повтаряме 2 месеца затворено и 1 месец отворено до безкрай! Понеже R е намалено ще трябва да направим само още една или две масови карантини от тип "прексвач" преди да стане налична ваксина. (Сингапур направи това наскоро, "въпреки че" контролираше COVID-19 за 4 месеца. Това не е провал: това *е* цената на усепха.)
 
-Here's a simulation of a "lazy case" scenario:
+Ето симулация на такъв тип сценарий:
 
-1. Lockdown, then
-2. A moderate amount of hygiene & "Test, Trace, Isolate", with a mild amount of "Masks For All", then...
-3. One more "circuit breaker" lockdown before a vaccine's found.
+1. Масова карантина и после...
+2. Средно количество хигиенни мерки и "тестване, проследяване, изолиране" с лека доза "маски за всички" и...
+3. Още една масова карантина от тип "прекъсвач" преди да е открита ваксина.
 
 <div class="sim">
 		<iframe src="sim?stage=int-7&format=lines&height=620" width="800" height="620"></iframe>
 </div>
 
-Not to mention all the *other* interventions we could do, to further push R down:
+Това е без да споменаваме всички *останали* мерки, които могат да бъдет предприети, за намалянето на R:
 
-* Travel restrictions/quarantines
-* Temperature checks at malls & schools
-* Deep-cleaning public spaces
-* [Replacing hand-shaking with foot-bumping](https://twitter.com/V_actually/status/1233785527788285953)
-* And all else human ingenuity shall bring
+* Ограничение на пътуванията/карантини
+* Проверки на температурата в молове и училища
+* Сериозно почистване на обществените места
+* [Замяна на ръкостискането с поздрав с крака](https://twitter.com/V_actually/status/1233785527788285953)
+* И всичко останало, което ще дойде в следствие на човещата изобретателност
 
 . . .
 
-We hope these plans give you hope. 
+Надяваме се, че тези планове ви дават надежда.
 
-**Even under a pessimistic scenario, it *is* possible to beat COVID-19, while protecting our mental and financial health.** Use the lockdown as a "reset button", keep R < 1 with case isolation + privacy-protecting contract tracing + at *least* cloth masks for all... and life can get back to a normal-ish!
+**Дори в един песимистичен сценарий *е възможно* да победим COVID-19, запазвайки също нашето психическо и финансово здраве.** Да използваме масовата карантина като "бутон за рестарт", да поддържаме R < 1 с изолация на случаите + запазващо анонимността, проследяване на контактите + *поне* маски за всички... и животът отново ще горе-долу нормален!
 
-Sure, you may have dried-out hands. But you'll get to invite a date out to a comics bookstore! You'll get to go out with friends to watch the latest Hollywood cash-grab. You'll get to people-watch at a library, taking joy in people going about the simple business of *being alive.*
+Да, наситина, може да се окажете с поизсъхнали ръце. Но ще можете да поканите някого на среща в книжарницата! Ще може да идете с приятели да гледате най-новия холивудски филм, искащ да ви прибере парите. Ще можете да наблюдавате хората в библиотека, изпитвайки удоволствие от това как хората са свободни *да си живеят живота.*
 
-Even under the worst-case scenario... life perseveres.
+Дори в най-песимистичния сценарий... животът продължава.
 
-So now, let's plan for some *worse* worst-case scenarios. Water landing, get your life jacket, and please follow the lights to the emergency exits:
+Нека сега планираме за някои *по-лоши* най-песимистични сценарии. Предстои водно приземяване, пригответе спасителната си жилетка и следвайте светлините водещи до изходите:
 
 <div class="section chapter">
     <div>
