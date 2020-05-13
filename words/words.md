@@ -696,24 +696,24 @@ Thankfully, because summer reduces R, it'll make the situation better:
     </div>
 </div>
 
-Plane's sunk. We've scrambled onto the life rafts. It's time to find dry land.[^dry_land]
+Самолетът потъна. Разпръснахме се по спасителните лодки. Време е да намерим суша.[^dry_land]
 
-[^dry_land]: Dry land metaphor [from Marc Lipsitch & Yonatan Grad, on STAT News](https://www.statnews.com/2020/04/01/navigating-covid-19-pandemic/)
+[^dry_land]: Метафора за сушата [от Марк Липсич и Йонатан Град в STAT News](https://www.statnews.com/2020/04/01/navigating-covid-19-pandemic/)
 
-Teams of epidemiologists and policymakers ([left](https://www.americanprogress.org/issues/healthcare/news/2020/04/03/482613/national-state-plan-end-coronavirus-crisis/), [right](https://www.aei.org/research-products/report/national-coronavirus-response-a-road-map-to-reopening/ ), and [multi-partisan](https://ethics.harvard.edu/covid-roadmap)) have come to a consensus on how to beat COVID-19, while protecting our lives *and* liberties.
+Екипи от епидемиолози и политици ([леви](https://www.americanprogress.org/issues/healthcare/news/2020/04/03/482613/national-state-plan-end-coronavirus-crisis/), [десни](https://www.aei.org/research-products/report/national-coronavirus-response-a-road-map-to-reopening/) и [непартийни](https://ethics.harvard.edu/covid-roadmap)) са достигнали до съгласие как да победим COVID-19, запазвайки живота *и* правата си.
 
-Here's the rough idea, with some (less-consensus) backup plans:
+Ето главната идея с някои (не дотам договерни) резервни палнове:
 
 ![](pics/plan.png)
 
-So what does this mean for YOU, right now?
+Какво означа това за ТЕБ сега?
 
-**For everyone:** Respect the lockdown so we can get out of Phase I asap. Keep washing those hands. Make your own masks. Download a *privacy-protecting* contact tracing app when those are available next month. Stay healthy, physically & mentally! And write your local policymaker to get off their butt and...
+**За всички:** Спазвайте масовата карантина, за да можем да излезем от Първа фаза максимално бързо. Продължавайте да си миете ръцете. Правете собсвени маски. Изтеглете, запазващи анонимността, приложения за проследяване на контактите когато има такива налични другия месец. Останете здрави, физически и психически! И пишете на вашите политици да се вдигнат от задниците си и...
 
-**For policymakers:** Make laws to support folks who have to self-isolate/quarantine. Hire more manual contact tracers, *supported* by privacy-protecting contact tracing apps. Direct more funds into the stuff we should be building, like...
+**За политици:** Да въведат закони в подкрепа на хорта, които трябва да се самоизолират/поставят в карантина. Да наемат повече хора проследяващи контактите, които да бъдат *подкрепяни* от приложения за проследяване на контактите, акцентиращи върху анонимността. Да осигурят повече средства за нещата, от които имаме нужда, като...
 
-**For builders:** Build tests. Build ventilators. Build personal protective equipment for hospitals. Build tests. Build masks. Build apps. Build antivirals, prophylactics, and other treatments that aren't vaccines. Build vaccines. Build tests. Build tests. Build tests. Build hope. 
+**За прозиводителите:** Създавайте тестове. Създавайте респиратори. Създавйте защитна екипировка за болници. Създавайте тестове. Създавайте маски. Създавайте приложения. Създавайте противовирусни лекарства, профилактики и други терапии, които не са ваксини. Създавайте ваксини. Създавайте тестове. Създавайте тестове. Създавайте тестове. Създавайте надежда.
 
-Don't downplay fear to build up hope. Our fear should *team up* with our hope, like the inventors of airplanes & parachutes. Preparing for horrible futures is how we *create* a hopeful future.
+Не подценявайте силата на страха да изгражда надежда. Нашият страх трябва да се *обедини* с надеждата ни, както изобретателите на самолети и парашути. Подготвяйки се за лошите сценарий, *създавме* бъдеще изпълнено с надежда.
 
-The only thing to fear is the idea that the only thing to fear is fear itself.
+Единственото нещо, от което трябва да се страхуваме, е самата идея, че единственото нещо, от което трябва да се страухваме, е самият страх.
