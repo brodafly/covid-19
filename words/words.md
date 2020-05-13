@@ -582,116 +582,117 @@ And if all that *still* isn't enough to get R < 1... we can do another lockdown.
 <div class="section chapter">
     <div>
 		<img src="banners/curve.png" height=480 style="position: absolute;"/>
-        <div>The Next Few Years</div>
+        <div>Следващите няколко години</div>
     </div>
 </div>
 
-You get COVID-19, and recover. Or you get the COVID-19 vaccine. Either way, you're now immune...
+Заразен си с COVID-19 и се възстановяваш. Или получаваш ваксина против COVID-19. И в двата случая, вече имаш имунитет...
 
-...*for how long?*
+...*но за колко дълго?*
 
-* COVID-19 is most closely related to SARS, which gave its survivors 2 years of immunity.[^SARS immunity]
-* The coronaviruses that cause "the" common cold give you 8 months of immunity.[^cold immunity]
-* There's reports of folks recovering from COVID-19, then testing positive again, but it's unclear if these are false positives.[^unclear]
-* One *not-yet-peer-reviewed* study on monkeys showed immunity to the COVID-19 coronavirus for at least 28 days.[^monkeys]
+* COVID-19 е най-сходен със SARS, срещу когото оцелелите разиват двугодшиен имунитет.[^SARS immunity]
+* Коронавирусите, които причиняват обикновената настинка, ти дават 8 месеца имунитет.[^cold immunity]
+* Има сведения за хора, които са се възстановили от COVID-19, и след повторно тестове отново били позитивни, но не е ясно дали това не са лъжливи положителни.[^unclear]
+* Едно *все още нерецензирано* проучване върху маймуни демонстрира имунитет към COVID-19 коронавируса за поне 28 дена.[^monkeys]
 
-But for COVID-19 *in humans*, as of May 1st 2020, "how long" is the big unknown.
+Но за COVID-19 *при хора*, към 1. Май 2020 не се знае колко дълг трае.
 
-[^SARS immunity]: “SARS-specific antibodies were maintained for an average of 2 years [...] Thus, SARS patients might be susceptible to reinfection ≥3 years after initial exposure.” [Wu LP, Wang NC, Chang YH, et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2851497/) "Sadly" we'll never know how long SARS immunity would have really lasted, since we eradicated it so quickly.
+[^SARS immunity]: “SARS-specific antibodies were maintained for an average of 2 years [...] Thus, SARS patients might be susceptible to reinfection ≥3 years after initial exposure.” [Wu LP, Wang NC, Chang YH, et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2851497/) "За жалост" никога няма да узнаем колко дълго наистина трае имунитетът към SARS, защото го унищожихме толкова бързо.
 
 [^cold immunity]: “We found no significant difference between the probability of testing positive at least once and the probability of a recurrence for the beta-coronaviruses HKU1 and OC43 at 34 weeks after enrollment/first infection.” [Marta Galanti & Jeffrey Shaman (PDF)](http://www.columbia.edu/~jls106/galanti_shaman_ms_supp.pdf)
 
 [^unclear]: “Once a person fights off a virus, viral particles tend to linger for some time. These cannot cause infections, but they can trigger a positive test.” [from STAT News by Andrew Joseph](https://www.statnews.com/2020/04/20/everything-we-know-about-coronavirus-immunity-and-antibodies-and-plenty-we-still-dont/)
 
-[^monkeys]: From [Bao et al.](https://www.biorxiv.org/content/10.1101/2020.03.13.990226v1.abstract) *Disclaimer: This article is a preprint and has not been certified by peer review (yet).* Also, to emphasize: they only tested re-infection 28 days later. 
+[^monkeys]: From [Bao et al.](https://www.biorxiv.org/content/10.1101/2020.03.13.990226v1.abstract) *Забележка: Това е предварителен печат на въпросната статия и тя все още не е рецензирана.* Също така да наблегнем, че те са тествали за повторно заразяване след 28 дни.
 
-For these simulations, let's say it's 1 year.
-**Here's a simulation starting with 100% <span class="nowrap"><icon r></icon>**,</span> exponentially decaying into susceptible, no-immunity <span class="nowrap"><icon s></icon>s</span> after 1 year, on *average*, with variation:
+За тези симулации нека предположим, че е 1 година.
+**Ето симулация, която започва със 100% <span class="nowrap"><icon r></icon>**,</span> експоненциално превръщащи се в уязвими и без имунитет <icon s></icon> след *средно* 1 година с вараиции:
 
 <div class="sim">
 		<iframe src="sim?stage=yrs-1&format=lines&height=600" width="800" height="600"></iframe>
 </div>
 
-Return of the exponential decay!
+Завръщането на експоненциалния разпад!
 
-This is the **SEIRS Model**. The final "S" stands for <icon s></icon> Susceptible, again.
+Това е така нареченият **SEIRS модел**. Последното "S" означава отново <icon s></icon> Уязвим.
 
 ![](pics/seirs.png)
 
-Now, let's simulate a COVID-19 outbreak, over 10 years, with no interventions... *if immunity only lasts a year:*
+Сега, нека симулираме COVID-19 пандемия, продължаваща 10 години без да се взимат каквито и да е мерки... *ако имунитетът трае само година:*
 
 <div class="sim">
 		<iframe src="sim?stage=yrs-2&format=lines&height=600" width="800" height="600"></iframe>
 </div>
 
-In previous simulations, we only had *one* ICU-overwhelming spike. Now, we have several, *and* <icon i></icon> cases come to a rest *permanently at* ICU capacity. (Which, remember, we *tripled* for these simulations)
+В предишните симулации имахме само *едно* надскачане на капацитета на интензивните отделения. Сега имаме няколко *и* броят на <icon i></icon>, в крайна сметка, *завинаги* остава на границата на капацитета на интензивните отделения. (Което, помнете, ние *утроихме* за тези симулации)
 
-R = 1, it's **endemic.**
+R = 1 означава **ендемично** положение.
 
+За радост, тъй като лятото намаля R, това ще подобри положението:
 Thankfully, because summer reduces R, it'll make the situation better:
 
 <div class="sim">
 		<iframe src="sim?stage=yrs-3&format=lines&height=640" width="800" height="640"></iframe>
 </div>
 
-Oh.
+Опа.
 
-Counterintuitively, summer makes the spikes worse *and* regular! This is because summer reduces new <span class="nowrap"><icon i></icon>s,</span> but that in turn reduces new immune <span class="nowrap"><icon r></icon>s.</span> Which means immunity plummets in the summer, *creating* large regular spikes in the winter.
+Обратно на интуицията лятото прави пиковете по-лоши *и* по-чести! Това е защото лятото намаля броя нови <span class="nowrap"><icon i></icon>,</span> но за сметка на това намаля броя нови имунизирани <span class="nowrap"><icon r></icon>.</span> Това означава, че имунитетът спада през лятото, *създавайки* големи пикове през зимата.
 
-Thankfully, the solution to this is pretty straightforward – just vaccinate people every fall/winter, like we do with flu shots:
+За радост решението е доста просто - ваксиниране на хората всяка есен/зима, както правим и с ваксините против грип:
 
-**(After playing the recording, try simulating your own vaccination campaigns! Remember you can pause/continue the sim at any time)**
+**(След като изгледате записания сценарий, опитайте се да симулирате ваши собствени кампании по ваксинация. Помнете, че може да спирате/продължавате симулацията по всяко време)**
 
 <div class="sim">
 		<iframe src="sim?stage=yrs-4&format=lines" width="800" height="540"></iframe>
 </div>
 
-But here's the scarier question:
+Но ето го по-страшният въпрос:
 
-What if there's no vaccine for *years*? Or *ever?*
+Ами, ако няма ваксина с *години*? Или пък *въобще?*
 
-**To be clear: this is unlikely.** Most epidemiologists expect a vaccine in 1 to 2 years. Sure, there's never been a vaccine for any of the other coronaviruses before, but that's because SARS was eradicated quickly, and "the" common cold wasn't worth the investment. 
+**Да бъдем честни: това е малко вероятно.** Повечето епидемиолози очакват ваксина в рамките на 1 до 2 години. Разбира се, никога не е имало ваксина за някой от другите коронавируси, но това е защото SARS беше унищожен бързо, а обикновената настинка не си струва инвестицията.
 
-Still, infectious disease researchers have expressed worries: What if we can't make enough?[^vax_enough] What if we rush it, and it's not safe?[^vax_safe]
+Все пак, изследователите на инфекциозни заболявания изразиха някои тревоги: Ами, ако не можем да произведем достаъчно?[^vax_enough] Ами, ако избързаме и не са сигурни?[^vax_safe]
 
 [^vax_enough]: “If a coronavirus vaccine arrives, can the world make enough?” [by Roxanne Khamsi, on Nature](https://www.nature.com/articles/d41586-020-01063-8)
 
 [^vax_safe]: “Don’t rush to deploy COVID-19 vaccines and drugs without sufficient safety guarantees” [by Shibo Jiang, on Nature](https://www.nature.com/articles/d41586-020-00751-9)
 
-Even in the nightmare "no-vaccine" scenario, we still have 3 ways out. From most to least terrible:
+Дори и в сценария *без ваксина* имаме 3 възможни изхода. Подредени от най-ужасен към най-малко ужасен:
 
-1) Do intermittent or loose R < 1 interventions, to reach "natural herd immunity". (Warning: this will result in many deaths & damaged lungs. *And* won't work if immunity doesn't last.)
+1) Провеждане на периодични или слаби мерки за постигане на R < 1 за достигане на "естествен колективен имунитет". (Внимание: това ще доведе до много смърт и увредени бели дробове. *Също така* няма да проработи, ако имунитетът не е дълготраен.)
 
-2) Do the R < 1 interventions forever. Contact tracing & wearing masks just becomes a new norm in the post-COVID-19 world, like how STI tests & wearing condoms became a new norm in the post-HIV world.
+2) Провеждане на мерки за постигане на R < 1 завинаги. Проследяване на контактите и носенето на маски се превръща в новото нормално в света на COVID-19 така, както тестовете за болести предавани по полов път и носенето на презервативи се преврънаха в новата световна норма след избухването на ХИВ.
 
-3) Do the R < 1 interventions until we develop treatments that make COVID-19 way, way less likely to need critical care. (Which we should be doing *anyway!*) Reducing ICU use by 10x is the same as increasing our ICU capacity by 10x:
+3) Провеждане на мерки за постигане на R < 1 докато открием терапии, които успяват силно да намалят нуждата на болните от COVID-19 от интензивни грижи. (Което би трябвало да правим *попринцип!*) Намалянето на нуждата от интезнивни отделения 10 пъти е същото като увеличаването на капацитета 10 пъти:
 
-**Here's a simulation of *no* lasting immunity, *no* vaccine, and not even any interventions – just slowly increasing capacity to survive the long-term spikes:**
+**Ето симулация на *краткотраен* имунитет, *липса* на ваксина и липса на каквито и да е мерки - само бавно увеличаване на капацитета с цел преживяване на бъдещите пикове:
 
 <div class="sim">
 		<iframe src="sim?stage=yrs-5&format=lines" width="800" height="540"></iframe>
 </div>
 
-Even under the *worst* worst-case scenario... life perseveres.
+Дори и при *най-лошия* най-лош сценарий... животър продължава.
 
 . . .
 
-Maybe you'd like to challenge our assumptions, and try different R<sub>0</sub>'s or numbers. Or try simulating your *own* combination of intervention plans!
+Може би искате да оспорите нашите предположения и да опитате с друга стойност за R<sub>0</sub> или другите числа. Или пък искате да симулирате ваша *собствена* комбинация от мерки!
 
-**Here's an (optional) Sandbox Mode, with *everything* available. (scroll to see all controls) Simulate & play around to your heart's content:**
+**Ето го (незадължителният) Свободен режим с *всичко* налично. (скролирайте, за да видите всички параметри) Симлурайте и си играйте колкото ви се иска:**
 
 <div class="sim">
 		<iframe src="sim?stage=SB&format=sb" width="800" height="540"></iframe>
 </div>
 
-This basic "epidemic flight simulator" has taught us so much. It's let us answer questions about the past few months, next few months, and next few years.
+Този базов "симулатор на епидемиологичния полет" ни научи на толкова много. Даде ни възможност да отговарим на въпроси за предните няколко месеца, за идните няколко месеца и за идните няколко години.
 
-So finally, let's return to...
+Сега, най-накрая, нека се върнем към...
 
 <div class="section chapter">
     <div>
 		<img src="banners/curve.png" height=480 style="position: absolute;"/>
-        <div>The Now</div>
+        <div>Сегашното време</div>
     </div>
 </div>
 
