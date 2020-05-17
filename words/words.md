@@ -43,7 +43,7 @@
 <div class="section chapter">
     <div>
 		<img src="banners/curve.png" height=480 style="position: absolute;"/>
-        <div>Последните няколко месеца</div>
+        <div>Последните месеци</div>
     </div>
 </div>
 
@@ -239,7 +239,7 @@ R<sub>0</sub> за COVID-19 се изчислява на около 2.2,[^r0_cov
 <div class="section chapter">
     <div>
 		<img src="banners/curve.png" height=480 style="position: absolute;"/>
-        <div>Следващите няколко месеца</div>
+        <div>Следващите месеци</div>
     </div>
 </div>
 
@@ -545,7 +545,6 @@ R<sub>0</sub> за COVID-19 се изчислява на около 2.2,[^r0_cov
 **Масова карантина тип "прекъсвач":**
 
 И ако всичко това *все още* не е достатъчно за постигане на R < 1... можем да направим още една масова карантина.
-And if all that *still* isn't enough to get R < 1... we can do another lockdown.
 
 Но няма да има нужда да повтаряме 2 месеца затворено и 1 месец отворено до безкрай! Понеже R е намалено ще трябва да направим само още една или две масови карантини от тип "прексвач" преди да стане налична ваксина. (Сингапур направи това наскоро, "въпреки че" контролираше COVID-19 за 4 месеца. Това не е провал: това *е* цената на усепха.)
 
@@ -582,7 +581,7 @@ And if all that *still* isn't enough to get R < 1... we can do another lockdown.
 <div class="section chapter">
     <div>
 		<img src="banners/curve.png" height=480 style="position: absolute;"/>
-        <div>Следващите няколко години</div>
+        <div>Следващите години</div>
     </div>
 </div>
 
